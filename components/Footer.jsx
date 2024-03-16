@@ -72,82 +72,6 @@ function Footer() {
                     data-aos="none"
                     data-name="Image"
                   >
-                    <div style={{ width: 0, height: 0, position: "relative" }}>
-                      <span
-                        style={{
-                          boxSizing: "border-box",
-                          display: "inline-block",
-                          overflow: "hidden",
-                          width: "initial",
-                          height: "initial",
-                          background: "none",
-                          opacity: 1,
-                          border: 0,
-                          margin: 0,
-                          padding: 0,
-                          position: "relative",
-                          maxWidth: "100%"
-                        }}
-                      >
-                        <span
-                          style={{
-                            boxSizing: "border-box",
-                            display: "block",
-                            width: "initial",
-                            height: "initial",
-                            background: "none",
-                            opacity: 1,
-                            border: 0,
-                            margin: 0,
-                            padding: 0,
-                            maxWidth: "100%"
-                          }}
-                        >
-                          <img
-                            style={{
-                              display: "block",
-                              maxWidth: "100%",
-                              width: "initial",
-                              height: "initial",
-                              background: "none",
-                              opacity: 1,
-                              border: 0,
-                              margin: 0,
-                              padding: 0
-                            }}
-                            alt="white-png-logo.png"
-                            aria-hidden="true"
-                            src='white-png-logo.png'
-                          />
-                        </span>
-                        <img
-                          alt="65f51dfb7e4304 52356170processed_720"
-                          borderradius={0}
-                          src={''}
-                          decoding="async"
-                          data-nimg="intrinsic"
-                          className=" css-ftc6fr"
-                          style={{
-                            position: "absolute",
-                            top: 0,
-                            left: 0,
-                            bottom: 0,
-                            right: 0,
-                            boxSizing: "border-box",
-                            padding: 0,
-                            border: "none",
-                            margin: "auto",
-                            display: "block",
-                            width: 0,
-                            height: 0,
-                            minWidth: "100%",
-                            maxWidth: "100%",
-                            minHeight: "100%",
-                            maxHeight: "100%"
-                          }}
-                        />
-                      </span>
-                    </div>
                     <div style={{ display: "block" }}>
                       <span
                         style={{
@@ -165,24 +89,10 @@ function Footer() {
                           maxWidth: "100%"
                         }}
                       >
-                        <span
-                          style={{
-                            boxSizing: "border-box",
-                            display: "block",
-                            width: "initial",
-                            height: "initial",
-                            background: "none",
-                            opacity: 1,
-                            border: 0,
-                            margin: 0,
-                            padding: 0,
-                            maxWidth: "100%"
-                          }}
-                        >
                           <img
                             style={{
                               display: "block",
-                              maxWidth: "100%",
+                              maxWidth: "12vw",
                               width: "initial",
                               height: "initial",
                               background: "none",
@@ -195,36 +105,11 @@ function Footer() {
                             aria-hidden="true"
                             src='white-png-logo.png'
                           />
-                        </span>
-                        <img
-                          alt="65f51dfb7e4304 52356170processed_720"
-                          borderradius={0}
-                          src='white-png-logo.png'
-                          decoding="async"
-                          data-nimg="intrinsic"
-                          className="css-ftc6fr"
-                          style={{
-                            position: "absolute",
-                            top: 0,
-                            left: 0,
-                            bottom: 0,
-                            right: 0,
-                            boxSizing: "border-box",
-                            padding: 0,
-                            border: "none",
-                            margin: "auto",
-                            display: "block",
-                            width: 0,
-                            height: 0,
-                            minWidth: "100%",
-                            maxWidth: "100%",
-                            minHeight: "100%",
-                            maxHeight: "100%"
-                          }}
-                        />
                       </span>
                     </div>
                   </div>
+
+                  {/* company detail */}
                   <div
                     className="viewer-page MuiBox-root css-j1fy4m"
                     style={{ backgroundColor: "transparent", width: "100%" }}
@@ -250,13 +135,15 @@ function Footer() {
                         style={{ color: "#ffffff" }}
                       >
                         <span style={{ color: "rgb(255, 255, 255)" }}>
-                          © 2023 Company Name
+                          © 2024 HZTL - MERCH
                         </span>
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
+
+              {/* company */}
               <div
                 className="MuiGrid-root MuiGrid-direction-xs-column MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-3 MuiGrid-grid-lg-3 MuiBox-root css-stp1kk"
                 style={{
@@ -356,6 +243,8 @@ function Footer() {
                   </div>
                 </div>
               </div>
+
+              {/* services */}
               <div
                 className="MuiGrid-root MuiGrid-direction-xs-column MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-3 MuiGrid-grid-lg-3 MuiBox-root css-stp1kk"
                 style={{
@@ -436,6 +325,8 @@ function Footer() {
                   </div>
                 </div>
               </div>
+
+              {/* connect */}
               <div
                 className="MuiGrid-root MuiGrid-direction-xs-column MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-3 MuiGrid-grid-lg-3 MuiBox-root css-stp1kk"
                 style={{

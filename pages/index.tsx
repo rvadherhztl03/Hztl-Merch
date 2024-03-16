@@ -1,7 +1,8 @@
-import { FunctionComponent } from 'react'
+import { FunctionComponent, useEffect } from 'react'
 // import { useOcSelector } from '../ordercloud/redux/ocStore'
 import Header from '../components/Header'
 import HeroBanner from '../components/HeroBanner'
+import Video from '../components/Video'
 import Description from '../components/Description'
 import Shoe from '../components/Shoe'
 import Design from '../components/Design'
@@ -10,14 +11,26 @@ import TeamMembers from '../components/TeamMembers'
 import StandOut from '../components/StandOut'
 import Footer from '../components/Footer'
 import React from 'react'
+import LocomotiveScroll from 'locomotive-scroll';
 
 const Home: FunctionComponent = () => {
   // const user = useOcSelector((s) => s.ocUser.user)
+
+useEffect(() => {
+  let scroll: LocomotiveScroll;
+  import("locomotive-scroll").then((locomotiveModule) => {
+    scroll = new locomotiveModule.default();
+  });
+  return () => {
+    if (scroll) scroll.destroy();
+  };
+});
 
   return (
     <>
       <Header />
       <HeroBanner />
+      <Video />
       <Description />
       <Design />
       <Shoe />
