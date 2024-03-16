@@ -20,6 +20,7 @@ function HeroBanner() {
 
         <ReactPlayer url='https://www.youtube.com/watch?v=IaWhyFOyIs0' loop playing={true} width='100vw'
           height='100vw'/>
+          
         <ul className="social">
           <li>
             <a href="#">Facebook</a>
