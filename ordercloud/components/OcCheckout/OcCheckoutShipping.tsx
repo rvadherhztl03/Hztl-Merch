@@ -7,7 +7,7 @@ import OcAddressForm from '../OcAddressForm'
 import OcShipEstimates from './OcShipEstimates'
 import { OcCheckoutStepProps } from './index'
 
-const OcCheckoutShipping: FunctionComponent<OcCheckoutStepProps> = ({ onNext, onPrev }) => {
+const OcCheckoutShipping: FunctionComponent<OcCheckoutStepProps> = ({ onNext }) => {
   const dispatch = useOcDispatch()
 
   const { initialized, order, lineItems, user } = useOcSelector((s) => ({
@@ -35,7 +35,7 @@ const OcCheckoutShipping: FunctionComponent<OcCheckoutStepProps> = ({ onNext, on
 
   return initialized && order ? (
     <div>
-      <h2>Shipping</h2>
+      <h2 className="text-2xl font-bold">Shipping</h2>
       {showAddressBook ? (
         <OcAddressBook
           id="shipping"
