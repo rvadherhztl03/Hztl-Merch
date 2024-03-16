@@ -56,22 +56,27 @@ const OcLoginForm: FunctionComponent<OcLoginFormProps> = ({
 
   return (
     <div className="bg-[#2f2d2e] text-white  overflow-hidden">
-      <div className="flex">
-        <div className="w-1/2 relative overflow-hidden">
-          <img src="login.jpg" alt="" className="absolute top-0 z-0 opacity-50" />
-          <div className="w-1/2 ps-5 py-5">
-            <h1 className="text-8xl z-10 relative">
-              FIND THE HZTL MERCH THAT SUITS <em className="text-8xl underline"> YOU</em>
+      <div className="flex flex-col lg:flex-row">
+        <div className="w-full lg:w-1/2 relative overflow-hidden">
+          <img
+            src="login.jpg"
+            alt=""
+            className="absolute top-0 z-0 opacity-50 object-cover h-full lg:h-auto bg-center"
+          />
+          <div className="w-3/4 lg:w-1/2 ps-5 py-5">
+            <h1 className="text-5xl lg:text-8xl z-10 relative leading-tight">
+              FIND THE HZTL MERCH THAT SUITS{' '}
+              <em className="text-6xl lg:text-8xl underline"> YOU</em>
             </h1>
           </div>
         </div>
-        <div className="w-1/2 flex justify-center items-center">
+        <div className="lg:w-1/2 flex justify-center items-center lg:py-0 py-10">
           <form
             name="ocLoginForm"
             onSubmit={handleSubmit}
-            className="flex gap-6 flex-col [&>label]:self-center [&>label]:w-3/4 px-7"
+            className="flex gap-6 flex-col lg:[&>label]:self-center lg:[&>label]:w-3/4 px-7"
           >
-            <h1 className="text-6xl text-center">{title}</h1>
+            <h1 className=" text-3xl lg:text-6xl text-center">{title}</h1>
             {error && <p>{error.message}</p>}
             <label htmlFor="identifier">
               <input
@@ -110,7 +115,7 @@ const OcLoginForm: FunctionComponent<OcLoginFormProps> = ({
             <Button
               type="submit"
               disabled={loading}
-              className="px-10 text-xl w-1/5 self-center bg-[#7fc3ba] text-[#2f2d2e]"
+              className="px-10 text-xl w-full lg:w-3/5 self-center bg-[#7fc3ba] text-[#2f2d2e] hover:bg-[#5a8982] transition-all hover:text-white "
             >
               Login
             </Button>
