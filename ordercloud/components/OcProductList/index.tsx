@@ -11,7 +11,6 @@ export interface OcProductListProps {
 
 const OcProductList: FunctionComponent<OcProductListProps> = ({ options, renderItem }) => {
   const products = useOcProductList(options)
-
   return (
     <div className="flex gap-4 justify-center flex-wrap gap-y-[40px]">
       {products &&
