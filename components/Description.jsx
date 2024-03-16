@@ -15,7 +15,6 @@ function Description() {
     data-name="Section"
     data-aos=""
   >
-    <img className='bg-cover w-full' src='SHOES-3D-Commercial.gif'/>
     <div className="css-1l7c0cy" />
     <div className="MuiBox-root css-iee15d absolute">
       <div className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-lel51l">
@@ -89,17 +88,11 @@ function Description() {
                         <br />
                       </p>
                       <p
-                        className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignLeft css-bxl2g5"
+                        className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignLeft css-bxl2g5 !mb-6"
                         style={{ color: "#fffff" }}
                       >
                         Explore endless possibilities with our interactive
                         3D customization tools.
-                      </p>
-                      <p
-                        className="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft css-k3ipun"
-                        style={{ color: "#fffff" }}
-                      >
-                        <br />
                       </p>
                       <p
                         className="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft css-k3ipun"
