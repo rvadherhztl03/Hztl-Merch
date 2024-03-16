@@ -3,7 +3,7 @@ module.exports = {
   darkMode: ['class'],
   content: [
     './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx,jsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
     './@/components/**/*.{ts,tsx}',
@@ -22,6 +22,10 @@ module.exports = {
       },
     },
     extend: {
+      aspectRatio: {
+        '4/3': '4 / 3',
+      },
+    
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
