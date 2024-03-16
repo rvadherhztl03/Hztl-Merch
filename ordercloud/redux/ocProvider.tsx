@@ -39,7 +39,7 @@ const OcInitializer: FunctionComponent<OcProviderProps> = ({ children, config })
         dispatch(retrieveOrder())
       }
     }
-  }, [dispatch, config, ocConfig, ocAuth, ocUser, ocCurrentOrder])
+  }, [dispatch, config, ocConfig, ocUser, ocCurrentOrder])
 
   return <>{children}</>
 }
