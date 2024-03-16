@@ -1,8 +1,9 @@
 import { createSlice, SerializedError } from '@reduxjs/toolkit'
-import { Configuration, DecodedToken, Tokens } from 'ordercloud-javascript-sdk'
+import { DecodedToken, Tokens } from 'ordercloud-javascript-sdk'
 import parseJwt from '../../utils/parseJwt'
 import login from './login'
 import logout from './logout'
+import registrationUser from './registration'
 
 interface OcAuthState {
   isAuthenticated: boolean
@@ -41,6 +42,19 @@ const ocAuthSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
+    builder.addCase(registrationUser.pending, (state) => {
+      state.loading = true
+      state.isAuthenticated = false
+    })
+    builder.addCase(registrationUser.fulfilled, (state) => {
+      state.isAnonymous = false
+
+      state.loading = false
+    })
+    builder.addCase(registrationUser.rejected, (state, action) => {
+      state.error = action.error
+      state.loading = false
+    })
     // LOGIN CASES
     builder.addCase(login.pending, (state) => {
       state.loading = true
