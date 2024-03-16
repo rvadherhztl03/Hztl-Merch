@@ -2,6 +2,7 @@ import { FunctionComponent } from 'react'
 import { useOcSelector } from '../ordercloud/redux/ocStore'
 import styles from '../styles/Home.module.css'
 import Shoe from '../components/Shoe';
+import HeroBanner from '../components/HeroBanner';
 
 const Home: FunctionComponent = () => {
   const user = useOcSelector((s) => s.ocUser.user)
@@ -9,9 +10,7 @@ const Home: FunctionComponent = () => {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <h1 className={styles.title}>React Headstart</h1>
-
-        <p className={styles.description}>OrderCloud shopping experience built on React</p>
+<HeroBanner />
 <Shoe />
         {user && (
           <pre className={styles.code}>
