@@ -7,9 +7,13 @@ module.exports = {
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
     './@/components/**/*.{ts,tsx}',
+    './ordercloud/components/**/*.{ts,tsx}',
   ],
   prefix: '',
   theme: {
+    backgroundImage: {
+      "login":"url('../public/login.jpg')"
+    },
     container: {
       center: true,
       padding: '2rem',
