@@ -7,7 +7,6 @@ import Description from '../components/Description'
 import Shoe from '../components/Shoe'
 import Design from '../components/Design'
 import Benefits from '../components/Benefits'
-import TeamMembers from '../components/TeamMembers'
 import UserReviews from '../components/UserReviews'
 import StandOut from '../components/StandOut'
 import Footer from '../components/Footer'
@@ -35,7 +34,6 @@ useEffect(() => {
       <Design />
       <Shoe />
       <Benefits />
-      <TeamMembers />
       <UserReviews />
       <StandOut />
       <Footer />
