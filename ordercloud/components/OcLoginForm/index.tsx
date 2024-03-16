@@ -24,7 +24,6 @@ const OcLoginForm: FunctionComponent<OcLoginFormProps> = ({
     password: '',
     remember: false,
   })
-
   const handleInputChange = (fieldKey: string) => (e: ChangeEvent<HTMLInputElement>) => {
     setFormValues((v) => ({ ...v, [fieldKey]: e.target.value }))
   }
@@ -43,13 +42,14 @@ const OcLoginForm: FunctionComponent<OcLoginFormProps> = ({
           remember: formValues.remember,
         })
       )
+      !error && router.push('/')
     },
     [formValues, dispatch]
   )
 
   useEffect(() => {
-    isAuthenticated && router.push('/home')
-  }, [])
+    isAuthenticated && router.push('/')
+  }, [isAuthenticated])
 
   return (
     <div className="bg-[#2f2d2e] text-white  overflow-hidden">

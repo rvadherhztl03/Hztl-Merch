@@ -2,7 +2,9 @@ import { AppProps } from 'next/app'
 import { ApiRole } from 'ordercloud-javascript-sdk'
 import Layout from '../components/Layout'
 import OcProvider from '../ordercloud/redux/ocProvider'
-import '../styles/globals.css'
+import Fonts from '../components/Head/Fonts'
+// import '../styles/globals.css'
+import '../assets/global.css'
 
 const clientId = process.env.NEXT_PUBLIC_OC_CLIENT_ID || ''
 const scope = process.env.NEXT_PUBLIC_OC_SCOPE
@@ -25,6 +27,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
         },
       }}
     >
+      <Fonts />
       <Layout>
         <Component {...pageProps} />
       </Layout>

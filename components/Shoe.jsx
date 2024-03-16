@@ -114,8 +114,6 @@ function Shoe() {
             >
               <IoMdRefresh className="text-xl cursor-pointer" />
             </button>
-
-            {/* <span className="text-gray-500 text-sm">Click to Generate Random Colors</span> */}
           </div>
           <div className="product-canvas bg-cover bg-opacity-10"
             // style={{ backgroundImage: "url('beach.jpg')" }}

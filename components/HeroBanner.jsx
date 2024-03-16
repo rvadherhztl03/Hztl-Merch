@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
 function HeroBanner() {
   return (
-    <>
-      <div className="MuiBox-root css-0">
+    <div data-scroll data-scroll-section data-scroll-speed="-.3">
+      <div className="MuiBox-root h-[91vh] pt-[10vh] css-0">
         <section
           className="MuiBox-root css-0"
           style={{
@@ -21,324 +21,141 @@ function HeroBanner() {
           <div className="MuiBox-root css-iee15d">
             <div className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-lel51l">
               <div
-                className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-o2ux9v"
-                data-aos="fade-up"
+                className="MuiGrid-root MuiGrid-container MuiBox-root css-es48py"
+                style={{
+                  width: '100%',
+                  display: 'flex',
+                  position: 'relative',
+                  minHeight: 150,
+                }}
+                data-name="Row"
+                data-aos=""
               >
-                <div
-                  className="MuiGrid-root MuiGrid-container MuiBox-root css-es48py"
-                  style={{
-                    width: '100%',
-                    display: 'flex',
-                    position: 'relative',
-                    minHeight: 150,
-                  }}
-                  data-name="Row"
-                  data-aos=""
-                >
+                <div className="MuiGrid-root flex-direction-column container-block MuiGrid-zeroMinWidth MuiGrid-direction-xs-column MuiBox-root css-122lahj">
+                  {/* heading & Description */}
                   <div
-                    className="MuiGrid-root flex-direction-row container-block MuiGrid-container MuiGrid-zeroMinWidth MuiBox-root css-w99kyc"
+                    className="viewer-page MuiBox-root css-1ebnygn"
                     style={{
-                      zIndex: 2,
-                      height: '100%',
-                      flexGrow: 1,
-                      display: 'flex',
-                      borderRadius: 0,
-                      flexWrap: 'wrap',
+                      backgroundColor: 'transparent',
+                      width: '100%',
                     }}
+                    data-aos=""
+                  >
+                    <div>
+                      <h1 className="MuiTypography-root MuiTypography-h1 MuiTypography-alignLeft css-15ys4xt !mb-7">
+                        Design Your Perfect Product in 3D!
+                      </h1>
+
+                      <p className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignLeft css-bxl2g5">
+                        Personalize your style with our cutting-edge Product customization platform.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* button */}
+                  <div
+                    className="MuiGrid-root MuiGrid-container MuiBox-root css-1qq8fe3"
+                    style={{
+                      width: '100%',
+                      display: 'flex',
+                      position: 'relative',
+                      minHeight: 50,
+                    }}
+                    data-name="Row"
+                    data-aos=""
                   >
                     <div
-                      className="MuiGrid-root MuiGrid-direction-xs-column MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-6 MuiGrid-grid-lg-6 MuiBox-root css-179jaj5"
+                      className="MuiGrid-root flex-direction-row container-block MuiGrid-container MuiGrid-zeroMinWidth MuiBox-root css-1069rdz"
                       style={{
-                        width: '100%',
+                        height: '100%',
+                        flexGrow: 1,
                         display: 'flex',
-                        position: 'relative',
-                        minHeight: 150,
+                        borderRadius: 0,
+                        flexWrap: 'wrap',
                       }}
-                      data-name="Column"
-                      data-aos=""
                     >
                       <div
-                        className="MuiGrid-root flex-direction-column container-block MuiGrid-zeroMinWidth MuiGrid-direction-xs-column MuiBox-root css-122lahj"
-                        style={{
-                          zIndex: 2,
-                          height: '100%',
-                          flexGrow: 1,
-                          display: 'flex',
-                          borderRadius: 0,
-                          flexWrap: 'nowrap',
-                        }}
+                        className="MuiGrid-root MuiBox-root css-1aynx6h"
+                        data-aos=""
+                        data-name="Button"
                       >
-                        <div
-                          className="viewer-page MuiBox-root css-1ebnygn"
-                          style={{
-                            backgroundColor: 'transparent',
-                            width: '100%',
-                          }}
-                          data-aos=""
+                        <button
+                          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-disableElevation css-tl0pzq"
+                          tabIndex={0}
+                          type="button"
+                          justifycontent="undefined"
+                          colorbutton="[object Object]"
+                          background="#ffffff"
+                          text="Create%20My%20Custom%20T-Shit"
                         >
-                          <div>
-                            <h1
-                              className="MuiTypography-root MuiTypography-h1 MuiTypography-alignLeft css-15ys4xt"
-                              style={{ color: '#000000' }}
-                            >
-                              <span style={{ color: 'rgb(17, 17, 17)' }}>
-                                Design Your Perfect T-Shirt in 3D!
-                              </span>
-                            </h1>
-                            <p
-                              className="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft css-k3ipun"
-                              style={{ color: '#000000' }}
-                            >
-                              <br />
-                            </p>
-                            <p
-                              className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignLeft css-bxl2g5"
-                              style={{ color: '#000000' }}
-                            >
-                              Personalize your style with our cutting-edge T-shirt customization
-                              platform.
-                            </p>
-                          </div>
-                        </div>
-                        <div
-                          className="MuiGrid-root MuiGrid-container MuiBox-root css-1qq8fe3"
-                          style={{
-                            width: '100%',
-                            display: 'flex',
-                            position: 'relative',
-                            minHeight: 50,
-                          }}
-                          data-name="Row"
-                          data-aos=""
-                        >
-                          <div
-                            className="MuiGrid-root flex-direction-row container-block MuiGrid-container MuiGrid-zeroMinWidth MuiBox-root css-1069rdz"
-                            style={{
-                              zIndex: 2,
-                              height: '100%',
-                              flexGrow: 1,
-                              display: 'flex',
-                              borderRadius: 0,
-                              flexWrap: 'wrap',
-                            }}
-                          >
-                            <div
-                              className="MuiGrid-root MuiBox-root css-1aynx6h"
-                              data-aos=""
-                              data-name="Button"
-                            >
-                                <button
-                                  className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-disableElevation css-tl0pzq"
-                                  tabIndex={0}
-                                  type="button"
-                                  justifycontent="undefined"
-                                  colorbutton="[object Object]"
-                                  background="#ffffff"
-                                  text="Create%20My%20Custom%20T-Shit"
-                                >
-                              <a style={{ display: 'contents' }} className="" href="/">
-                                  Create My Custom T-Shit
-                              </a>
-                                </button>
-                            </div>
-                            <div
-                              className="MuiGrid-root MuiBox-root css-1aynx6h"
-                              data-aos=""
-                              data-name="Button"
-                            >
-                                <button
-                                  className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeLarge MuiButton-outlinedSizeLarge MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeLarge MuiButton-outlinedSizeLarge MuiButton-disableElevation css-py6qz6"
-                                  tabIndex={0}
-                                  type="button"
-                                  justifycontent="undefined"
-                                  colorbutton="[object Object]"
-                                  background="#ffffff"
-                                  text="CONTACT"
-                                >
-                              <a style={{ display: 'contents' }} className="" href="/">
-                                  CONTACT
-                              </a>
-                                </button>
-                            </div>
-                          </div>
-                        </div>
+                          <a style={{ display: 'contents' }} className="" href="/products">
+                            Create Custom Product
+                          </a>
+                        </button>
                       </div>
-                    </div>
-                    <div
-                      className="MuiGrid-root MuiGrid-direction-xs-column MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-6 MuiGrid-grid-lg-6 MuiBox-root css-179jaj5"
-                      style={{
-                        width: '100%',
-                        display: 'flex',
-                        position: 'relative',
-                        minHeight: 150,
-                      }}
-                      data-name="Column"
-                      data-aos=""
-                    >
                       <div
-                        className="MuiGrid-root flex-direction-column container-block MuiGrid-zeroMinWidth MuiGrid-direction-xs-column MuiBox-root css-122lahj"
-                        style={{
-                          zIndex: 2,
-                          height: '100%',
-                          flexGrow: 1,
-                          display: 'flex',
-                          borderRadius: 0,
-                          flexWrap: 'nowrap',
-                        }}
+                        className="MuiGrid-root MuiBox-root css-1aynx6h"
+                        data-aos=""
+                        data-name="Button"
                       >
-                        <div
-                          className="MuiBox-root css-1sf3xto"
-                          style={{ alignSelf: 'center', position: 'relative' }}
-                          data-aos="flip-left"
-                          data-name="Image"
+                        <button
+                          className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeLarge MuiButton-outlinedSizeLarge MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeLarge MuiButton-outlinedSizeLarge MuiButton-disableElevation css-py6qz6"
+                          tabIndex={0}
+                          type="button"
+                          justifycontent="undefined"
+                          colorbutton="[object Object]"
+                          background="#ffffff"
+                          text="CONTACT"
                         >
-                          <div style={{ width: 0, height: 0, position: 'relative' }}>
-                            <span
-                              style={{
-                                boxSizing: 'border-box',
-                                display: 'inline-block',
-                                overflow: 'hidden',
-                                width: 'initial',
-                                height: 'initial',
-                                background: 'none',
-                                opacity: 1,
-                                border: 0,
-                                margin: 0,
-                                padding: 0,
-                                position: 'relative',
-                                maxWidth: '100%',
-                              }}
-                            >
-                              <span
-                                style={{
-                                  boxSizing: 'border-box',
-                                  display: 'block',
-                                  width: 'initial',
-                                  height: 'initial',
-                                  background: 'none',
-                                  opacity: 1,
-                                  border: 0,
-                                  margin: 0,
-                                  padding: 0,
-                                  maxWidth: '100%',
-                                }}
-                              >
-                                <img
-                                  style={{
-                                    display: 'block',
-                                    maxWidth: '100%',
-                                    width: 'initial',
-                                    height: 'initial',
-                                    background: 'none',
-                                    opacity: 1,
-                                    border: 0,
-                                    margin: 0,
-                                    padding: 0,
-                                  }}
-                                  alt="png-logo"
-                                  aria-hidden="true"
-                                  src='png-logo.png'
-                                />
-                              </span>
-                              <img
-                                alt="65f51dfb7e4304 52356170processed_center"
-                                borderradius={0}
-                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                decoding="async"
-                                data-nimg="intrinsic"
-                                className=" css-ftc6fr"
-                                style={{
-                                  position: 'absolute',
-                                  top: 0,
-                                  left: 0,
-                                  bottom: 0,
-                                  right: 0,
-                                  boxSizing: 'border-box',
-                                  padding: 0,
-                                  border: 'none',
-                                  margin: 'auto',
-                                  display: 'block',
-                                  width: 0,
-                                  height: 0,
-                                  minWidth: '100%',
-                                  maxWidth: '100%',
-                                  minHeight: '100%',
-                                  maxHeight: '100%',
-                                }}
-                              />
-                            </span>
-                          </div>
-                          <div style={{ display: 'block' }}>
-                            
-                              <span
-                                style={{
-                                  boxSizing: 'border-box',
-                                  display: 'block',
-                                  width: 'initial',
-                                  height: 'initial',
-                                  background: 'none',
-                                  opacity: 1,
-                                  border: 0,
-                                  margin: 0,
-                                  padding: 0,
-                                  maxWidth: '100%',
-                                }}
-                              >
-                                <img
-                                  style={{
-                                    display: 'block',
-                                    maxWidth: '100%',
-                                    width: 'initial',
-                                    height: 'initial',
-                                    background: 'none',
-                                    opacity: 1,
-                                    border: 0,
-                                    margin: 0,
-                                    padding: 0,
-                                  }}
-                                  alt=""
-                                  aria-hidden="true"
-                                  src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%271888%27%20height=%27968%27/%3e"
-                                />
-                              </span>
-                              <img
-                                alt="logo"
-                                borderradius={0}
-                                src='png-logo.png'
-                                decoding="async"
-                                data-nimg="intrinsic"
-                                className="css-ftc6fr"
-                                style={{
-                                  position: 'absolute',
-                                  top: 0,
-                                  left: 0,
-                                  bottom: 0,
-                                  right: 0,
-                                  boxSizing: 'border-box',
-                                  padding: 0,
-                                  border: 'none',
-                                  margin: 'auto',
-                                  display: 'block',
-                                  width: 0,
-                                  height: 0,
-                                  minWidth: '100%',
-                                  maxWidth: '100%',
-                                  minHeight: '100%',
-                                  maxHeight: '100%',
-                                }}
-                              />
-                          </div>
-                        </div>
+                          <a style={{ display: 'contents' }} className="font-semibold" href="/">
+                            CONTACT
+                          </a>
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
+              {/* Image */}
+              <div
+                className="MuiGrid-root MuiGrid-direction-xs-column MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-6 MuiGrid-grid-lg-6 MuiBox-root css-179jaj5"
+                style={{
+                  width: '100%',
+                  display: 'flex',
+                  position: 'relative',
+                  minHeight: 150,
+                }}
+                data-name="Column"
+                data-aos=""
+              >
+                <img
+                  alt="logo"
+                  borderradius={0}
+                  src="shoe1.png"
+                  decoding="async"
+                  data-nimg="intrinsic"
+                  className="css-ftc6fr"
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    bottom: 0,
+                    right: 0,
+                    boxSizing: 'border-box',
+                    padding: 0,
+                    border: 'none',
+                    margin: 'auto',
+                    display: 'block',
+                    width: '25vw',
+                  }}
+                />
+              </div>
             </div>
           </div>
         </section>
       </div>
-    </>
+    </div>
   )
 }
 
