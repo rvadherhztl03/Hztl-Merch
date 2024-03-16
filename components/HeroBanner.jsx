@@ -2,8 +2,10 @@ import React from 'react';
 
 function HeroBanner() {
   return (
-    <>
-      <div className="MuiBox-root css-0">
+    <div data-scroll
+    data-scroll-section
+    data-scroll-speed="-.3">
+      <div className="MuiBox-root h-[100vh] css-0">
         <section
           className="MuiBox-root css-0"
           style={{
@@ -82,7 +84,7 @@ function HeroBanner() {
                               style={{ color: '#000000' }}
                             >
                               <span style={{ color: 'rgb(17, 17, 17)' }}>
-                                Design Your Perfect T-Shirt in 3D!
+                                Design Your Perfect Product in 3D!
                               </span>
                             </h1>
                             <p
@@ -95,7 +97,7 @@ function HeroBanner() {
                               className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignLeft css-bxl2g5"
                               style={{ color: '#000000' }}
                             >
-                              Personalize your style with our cutting-edge T-shirt customization
+                              Personalize your style with our cutting-edge Product customization
                               platform.
                             </p>
                           </div>
@@ -137,7 +139,7 @@ function HeroBanner() {
                                   text="Create%20My%20Custom%20T-Shit"
                                 >
                               <a style={{ display: 'contents' }} className="" href="/">
-                                  Create My Custom T-Shit
+                                  Create Custom Product
                               </a>
                                 </button>
                             </div>
@@ -155,7 +157,7 @@ function HeroBanner() {
                                   background="#ffffff"
                                   text="CONTACT"
                                 >
-                              <a style={{ display: 'contents' }} className="" href="/">
+                              <a style={{ display: 'contents' }} className="font-semibold" href="/">
                                   CONTACT
                               </a>
                                 </button>
@@ -338,7 +340,7 @@ function HeroBanner() {
           </div>
         </section>
       </div>
-    </>
+    </div>
   )
 }
 

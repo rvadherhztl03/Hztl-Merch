@@ -3,7 +3,7 @@ import React from 'react'
 function Description() {
   return (
     <section
-    className="MuiBox-root css-0"
+    className="MuiBox-root css-0 relative "
     style={{
       backgroundColor: "#ffffff",
       display: "flex",
@@ -15,8 +15,9 @@ function Description() {
     data-name="Section"
     data-aos=""
   >
+    <img className='bg-cover w-full' src='bg-shoe.png'/>
     <div className="css-1l7c0cy" />
-    <div className="MuiBox-root css-iee15d">
+    <div className="MuiBox-root css-iee15d absolute">
       <div className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-lel51l">
         <div
           className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-o2ux9v"
@@ -77,32 +78,32 @@ function Description() {
                     <div>
                       <h2
                         className="MuiTypography-root MuiTypography-h2 MuiTypography-alignLeft css-gfak5e"
-                        style={{ color: "#000000" }}
+                        style={{ color: "#fffff" }}
                       >
                         Create Your Unique Shirt Design Today!
                       </h2>
                       <p
                         className="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft css-k3ipun"
-                        style={{ color: "#000000" }}
+                        style={{ color: "#fffff" }}
                       >
                         <br />
                       </p>
                       <p
                         className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignLeft css-bxl2g5"
-                        style={{ color: "#000000" }}
+                        style={{ color: "#fffff" }}
                       >
                         Explore endless possibilities with our interactive
                         3D customization tools.
                       </p>
                       <p
                         className="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft css-k3ipun"
-                        style={{ color: "#000000" }}
+                        style={{ color: "#fffff" }}
                       >
                         <br />
                       </p>
                       <p
                         className="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft css-k3ipun"
-                        style={{ color: "#000000" }}
+                        style={{ color: "#fffff" }}
                       >
                         The Custom T-Shirt Studio offers a revolutionary way
                         to design and personalize your own T-shirt styles.
