@@ -170,7 +170,7 @@ export default function registration() {
                 value={formData.firstName}
                 onChange={handleChange}
                 required
-                className="text-xl my-3 focus:outline-none border-b-2 w-full"
+                className="bg-transparent text-xl my-3 focus:outline-none border-b-2 w-full"
               />
               {errors?.firstName && <p className="error">{errors?.firstName}</p>}
             </label>
@@ -183,7 +183,7 @@ export default function registration() {
                 value={formData.lastName}
                 onChange={handleChange}
                 required
-                className="text-xl my-3 focus:outline-none border-b-2 w-full"
+                className="bg-transparent text-xl my-3 focus:outline-none border-b-2 w-full"
               />
               {errors.lastName && <p className="error">{errors.lastName}</p>}
             </label>
@@ -196,7 +196,7 @@ export default function registration() {
                 value={formData.username}
                 onChange={handleChange}
                 required
-                className="text-xl my-3 focus:outline-none border-b-2 w-full"
+                className="bg-transparent text-xl my-3 focus:outline-none border-b-2 w-full"
               />
               {errors.username && <p className="error">{errors.username}</p>}
             </label>
@@ -209,7 +209,7 @@ export default function registration() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="text-xl my-3 focus:outline-none border-b-2 w-full"
+                className="bg-transparent text-xl my-3 focus:outline-none border-b-2 w-full"
               />
               {errors.email && <p className="error">{errors.email}</p>}
             </label>
@@ -222,7 +222,7 @@ export default function registration() {
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                className="text-xl my-3 focus:outline-none border-b-2 w-full"
+                className="bg-transparent text-xl my-3 focus:outline-none border-b-2 w-full"
               />
             </label>
             <label htmlFor="password">
@@ -233,7 +233,7 @@ export default function registration() {
                 placeholder="Password"
                 value={formData.password}
                 onChange={handleChange}
-                className="text-xl my-3 focus:outline-none border-b-2 w-full"
+                className="bg-transparent text-xl my-3 focus:outline-none border-b-2 w-full"
                 required
               />
               {errors.password && <p className="error">{errors.password}</p>}
@@ -246,7 +246,7 @@ export default function registration() {
                 placeholder="*Confirm Password"
                 value={formData.confirmPassword}
                 onChange={handleChange}
-                className="text-xl my-3 focus:outline-none border-b-2 w-full"
+                className="bg-transparent text-xl my-3 focus:outline-none border-b-2 w-full"
                 required
               />
               {errors.confirmPassword && <p className="error">{errors.confirmPassword}</p>}

@@ -84,7 +84,7 @@ const OcLoginForm: FunctionComponent<OcLoginFormProps> = ({
                 value={formValues.identifier}
                 onChange={handleInputChange('identifier')}
                 required
-                className="text-2xl my-5 focus:outline-none border-b-2 w-full"
+                className="bg-transparent text-2xl my-5 focus:outline-none border-b-2 w-full"
               />
             </label>
             <label htmlFor="password">
@@ -95,7 +95,7 @@ const OcLoginForm: FunctionComponent<OcLoginFormProps> = ({
                 placeholder="Password"
                 value={formValues.password}
                 onChange={handleInputChange('password')}
-                className="text-2xl my-5 focus:outline-none border-b-2 w-full"
+                className="bg-transparent text-2xl my-5 focus:outline-none border-b-2 w-full"
                 required
               />
             </label>
