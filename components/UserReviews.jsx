@@ -45,18 +45,6 @@ const usersReviewArray = [
       "I've found my new favorite destination for shoe shopping! The website layout was aesthetically pleasing and user-friendly, making the browsing experience enjoyable. The range of shoes available was impressive. I appreciated the sizing guide, ensuring a perfect fit. Can't wait to shop here again!",
     userImage: 'Nikita.jpeg',
   },
-  {
-    userName: 'Dhrumil Mehta',
-    userFeedback:
-      'As a fashion enthusiast, I was thrilled to try out Custom Shoes Studio. The customization options are impressive, and the 3D technology adds a whole new level of excitement. Definitely recommending it to my friends!',
-    userImage: 'Dhrumil.png',
-  },
-  {
-    userName: 'Rushi Patel',
-    userFeedback:
-      "I'm not usually into online shopping, but Custom Shoes Studio caught my attention. The 3D customization feature is addictive—I couldn't stop experimenting with different colors and styles. It's a game-changer for sure!",
-    userImage: 'Rushi.png',
-  },
 ]
 
 const splideOptions = {
