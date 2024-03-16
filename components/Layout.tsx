@@ -3,12 +3,12 @@ import Link from 'next/link'
 import { FunctionComponent } from 'react'
 import logout from '../ordercloud/redux/ocAuth/logout'
 import { useOcDispatch, useOcSelector } from '../ordercloud/redux/ocStore'
-import { Button } from '../@/components/ui/button'
+// import { Button } from '../@/components/ui/button'
 
 const Layout: FunctionComponent = ({ children }) => {
   const dispatch = useOcDispatch()
 
-  const { user, isAnonymous, loading, lineItemCount } = useOcSelector((s) => ({
+  const { isAnonymous, loading, lineItemCount } = useOcSelector((s) => ({
     user: s.ocUser.user,
     loading: s.ocAuth.loading,
     isAnonymous: s.ocAuth.isAnonymous,
