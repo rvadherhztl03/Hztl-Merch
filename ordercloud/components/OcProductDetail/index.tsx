@@ -3,7 +3,7 @@ import { FormEvent, FunctionComponent, useCallback, useEffect, useState } from '
 import useOcProductDetail from '../../hooks/useOcProductDetail'
 import { createLineItem, updateLineItem } from '../../redux/ocCurrentOrder'
 import { useOcDispatch, useOcSelector } from '../../redux/ocStore'
-import formatPrice from '../../utils/formatPrice'
+
 import OcQuantityInput from '../OcQuantityInput'
 import OcProductSpecField from './OcProductSpecField'
 
@@ -26,7 +26,8 @@ const OcProductDetail: FunctionComponent<OcProductDetailProps> = ({
   onLineItemUpdated,
 }) => {
   const dispatch = useOcDispatch()
-  const { product, specs, variants } = useOcProductDetail(productId)
+  const { product, specs } = useOcProductDetail(productId)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [loading, setLoading] = useState(false)
 
   const [specValues, setSpecValues] = useState([])
@@ -53,9 +54,7 @@ const OcProductDetail: FunctionComponent<OcProductDetailProps> = ({
     }
   }, [specs, lineItem])
 
-  const [quantity, setQuantity] = useState(
-    lineItem ? lineItem.Quantity : (product && product.PriceSchedule.MinQuantity) || 1
-  )
+  const [quantity, setQuantity] = useState(lineItem ? lineItem.Quantity : 0)
 
   const handleSpecFieldChange = (values: { SpecID: string; OptionID?: string; Value?: string }) => {
     setSpecValues((sv) =>
@@ -99,37 +98,100 @@ const OcProductDetail: FunctionComponent<OcProductDetailProps> = ({
     },
     [dispatch, lineItem, quantity, onLineItemUpdated, specValues]
   )
-
+  const query = window.location.search
+  console.log('@@query', query)
   return product ? (
-    <div>
-      <h2>{product.Name}</h2>
-      <b>{formatPrice(product.PriceSchedule.PriceBreaks[0].Price)}</b>
-      {/* eslint-disable-next-line */}
-      <p dangerouslySetInnerHTML={{ __html: product.Description }} />
-      <form onSubmit={lineItem ? handleUpdateCart : handleAddToCart}>
-        {specs &&
-          specs.map((s) => {
-            const specValue = specValues.find((sv) => sv.SpecID === s.ID)
-            return (
-              <OcProductSpecField
-                key={s.ID}
-                spec={s}
-                onChange={handleSpecFieldChange}
-                optionId={specValue && specValue.OptionID}
-                value={specValue && specValue.Value}
-              />
-            )
-          })}
-        <OcQuantityInput
-          controlId="addToCart"
-          priceSchedule={product.PriceSchedule}
-          quantity={quantity}
-          onChange={setQuantity}
-        />
-        <button type="submit" disabled={loading}>
-          {`${lineItem ? 'Update' : 'Add To'} Cart`}
-        </button>
-      </form>
+    // <div>
+    //   <h2>{product.Name}</h2>
+    //   <b>{formatPrice(product.PriceSchedule.PriceBreaks[0].Price)}</b>
+    //   {/* eslint-disable-next-line */}
+    //   <p>{product.Description}</p>
+    //   <form onSubmit={lineItem ? handleUpdateCart : handleAddToCart}>
+    //     {specs &&
+    //       specs.map((s) => {
+    //         const specValue = specValues.find((sv) => sv.SpecID === s.ID)
+    //         return (
+    //           <OcProductSpecField
+    //             key={s.ID}
+    //             spec={s}
+    //             onChange={handleSpecFieldChange}
+    //             optionId={specValue && specValue.OptionID}
+    //             value={specValue && specValue.Value}
+    //           />
+    //         )
+    //       })}
+    //     <OcQuantityInput
+    //       controlId="addToCart"
+    //       priceSchedule={product.PriceSchedule}
+    //       quantity={quantity}
+    //       onChange={setQuantity}
+    //     />
+    //     <button type="submit" disabled={loading}>
+    //       {`${lineItem ? 'Update' : 'Add To'} Cart`}
+    //     </button>
+    //   </form>
+    // </div>
+    <div className="min-w-screen min-h-screen bg-yellow-300 flex items-center p-5 lg:p-10 overflow-hidden relative">
+      <div className="w-full max-w-6xl rounded bg-white shadow-xl p-10 lg:p-20 mx-auto text-gray-800 relative md:text-left">
+        <div className="md:flex items-center -mx-10">
+          <div className="w-full md:w-1/2 px-10 mb-10 md:mb-0">
+            <div className="relative">
+              <img src={product.xp.Images[0]} className="w-full relative z-10" alt="" />
+              <div className="border-4 border-yellow-200 absolute top-10 bottom-10 left-10 right-10 z-0"></div>
+            </div>
+          </div>
+          <div className="w-full md:w-1/2 px-10">
+            <div className="mb-10">
+              <h1 className="font-bold uppercase text-2xl mb-5">{product.Name}</h1>
+              <p className="text-sm">{product.Description} </p>
+            </div>
+            <div>
+              <div className="inline-block align-bottom mr-5">
+                <span className="text-2xl leading-none align-baseline">$</span>
+                <span className="font-bold text-5xl leading-none align-baseline">59</span>
+                <span className="text-2xl leading-none align-baseline">.99</span>
+              </div>
+              <div className="inline-block align-bottom">
+                <form onSubmit={lineItem ? handleUpdateCart : handleAddToCart}>
+                  {specs &&
+                    specs.map((s) => {
+                      const specValue = specValues.find((sv) => sv.SpecID === s.ID)
+                      return (
+                        <OcProductSpecField
+                          key={s.ID}
+                          spec={s}
+                          onChange={handleSpecFieldChange}
+                          optionId={specValue && specValue.OptionID}
+                          value={specValue && specValue.Value}
+                        />
+                      )
+                    })}
+                  {/* <OcQuantityInput
+                    controlId="addToCart"
+                    priceSchedule={product.PriceSchedule}
+                    quantity={quantity}
+                    onChange={setQuantity}
+                  /> */}
+                  <OcQuantityInput
+                    controlId="addToCart"
+                    priceSchedule={product.PriceSchedule}
+                    quantity={quantity}
+                    onChange={setQuantity}
+                  />
+                  {quantity > 0 && (
+                    <a
+                      href={'/cart'}
+                      className="bg-yellow-300 opacity-75 hover:opacity-100 block mt-6 text-yellow-900 hover:text-gray-900 rounded-full px-10 py-2 font-semibold"
+                    >
+                      Checkout
+                    </a>
+                  )}
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   ) : null
 }

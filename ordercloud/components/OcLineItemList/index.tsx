@@ -16,7 +16,7 @@ const OcLineItemList: FunctionComponent<OcLineItemListProps> = ({ emptyMessage, 
   const { lineItems } = useOcCurrentOrder()
   const dispatch = useOcDispatch()
 
-  return lineItems && lineItems.length ? (
+  return lineItems && lineItems.length > 0 ? (
     <div className="py-10">
       <button
         type="button"
