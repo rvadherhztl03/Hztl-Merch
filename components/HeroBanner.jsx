@@ -1,5 +1,4 @@
 import React from 'react';
-import Logo from '../public/png-logo.png';
 
 function HeroBanner() {
   return (

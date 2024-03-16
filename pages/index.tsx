@@ -13,7 +13,7 @@ import Footer from '../components/Footer'
 import React from 'react'
 
 const Home: FunctionComponent = () => {
-  const user = useOcSelector((s) => s.ocUser.user)
+  // const user = useOcSelector((s) => s.ocUser.user)
 
   return (
     <>
