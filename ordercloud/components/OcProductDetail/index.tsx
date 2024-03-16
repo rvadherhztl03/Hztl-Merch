@@ -27,6 +27,7 @@ const OcProductDetail: FunctionComponent<OcProductDetailProps> = ({
 }) => {
   const dispatch = useOcDispatch()
   const { product, specs, variants } = useOcProductDetail(productId)
+  console.log(product, 'product');
   const [loading, setLoading] = useState(false)
 
   const [specValues, setSpecValues] = useState([])
@@ -99,6 +100,8 @@ const OcProductDetail: FunctionComponent<OcProductDetailProps> = ({
     },
     [dispatch, lineItem, quantity, onLineItemUpdated, specValues]
   )
+console.log(productId,'id');
+console.log(product?.Name,'name');
 
   return product ? (
     <div>
