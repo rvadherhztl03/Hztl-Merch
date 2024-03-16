@@ -2,12 +2,12 @@
 module.exports = {
   darkMode: ['class'],
   content: [
-    './pages/**/*.{ts,tsx}',
+    './pages/**/*.{ts,tsx,jsx}',
     './components/**/*.{ts,tsx,jsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-    './@/components/**/*.{ts,tsx}',
-    './ordercloud/components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx,jsx}',
+    './src/**/*.{ts,tsx,jsx}',
+    './@/components/**/*.{ts,tsx,jsx}',
+    './ordercloud/components/**/*.{ts,tsx,jsx}',
   ],
   prefix: '',
   theme: {
@@ -22,10 +22,6 @@ module.exports = {
       },
     },
     extend: {
-      aspectRatio: {
-        '4/3': '4 / 3',
-      },
-    
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

@@ -115,15 +115,15 @@ function Footer() {
                               margin: 0,
                               padding: 0
                             }}
-                            alt=""
+                            alt="white-png-logo.png"
                             aria-hidden="true"
-                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27191%27%20height=%2797%27/%3e"
+                            src='white-png-logo.png'
                           />
                         </span>
                         <img
                           alt="65f51dfb7e4304 52356170processed_720"
                           borderradius={0}
-                          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                          src={''}
                           decoding="async"
                           data-nimg="intrinsic"
                           className=" css-ftc6fr"
@@ -146,18 +146,6 @@ function Footer() {
                             maxHeight: "100%"
                           }}
                         />
-                        <noscript>
-                          &lt;img alt="65f51dfb7e4304 52356170processed_720"
-                          borderRadius="0" loading="lazy" decoding="async"
-                          data-nimg="intrinsic"
-                          style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
-                          class=" css-ftc6fr"
-                          srcSet="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Faurity%2Fimage%2Fupload%2Fv1710562932%2F65f51dfb7e4304_52356170processed_720_8f014fcc8a.jpg&amp;amp;w=256&amp;amp;q=90
-                          1x,
-                          /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Faurity%2Fimage%2Fupload%2Fv1710562932%2F65f51dfb7e4304_52356170processed_720_8f014fcc8a.jpg&amp;amp;w=384&amp;amp;q=90
-                          2x"
-                          src="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Faurity%2Fimage%2Fupload%2Fv1710562932%2F65f51dfb7e4304_52356170processed_720_8f014fcc8a.jpg&amp;amp;w=384&amp;amp;q=90"/&gt;
-                        </noscript>
                       </span>
                     </div>
                     <div style={{ display: "block" }}>
@@ -203,15 +191,15 @@ function Footer() {
                               margin: 0,
                               padding: 0
                             }}
-                            alt=""
+                            alt="white-png-logo"
                             aria-hidden="true"
-                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27191%27%20height=%2797%27/%3e"
+                            src='white-png-logo.png'
                           />
                         </span>
                         <img
                           alt="65f51dfb7e4304 52356170processed_720"
                           borderradius={0}
-                          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                          src='white-png-logo.png'
                           decoding="async"
                           data-nimg="intrinsic"
                           className="css-ftc6fr"
@@ -234,18 +222,6 @@ function Footer() {
                             maxHeight: "100%"
                           }}
                         />
-                        <noscript>
-                          &lt;img alt="65f51dfb7e4304 52356170processed_720"
-                          borderRadius="0" loading="lazy" decoding="async"
-                          data-nimg="intrinsic"
-                          style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
-                          class="css-ftc6fr"
-                          srcSet="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Faurity%2Fimage%2Fupload%2Fw_191%2Ch_97%2Cq_auto%2Cf_auto%2Ce_blur%3A100%2Cq_40%2F65f51dfb7e4304_52356170processed_720_8f014fcc8a&amp;amp;w=256&amp;amp;q=75
-                          1x,
-                          /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Faurity%2Fimage%2Fupload%2Fw_191%2Ch_97%2Cq_auto%2Cf_auto%2Ce_blur%3A100%2Cq_40%2F65f51dfb7e4304_52356170processed_720_8f014fcc8a&amp;amp;w=384&amp;amp;q=75
-                          2x"
-                          src="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Faurity%2Fimage%2Fupload%2Fw_191%2Ch_97%2Cq_auto%2Cf_auto%2Ce_blur%3A100%2Cq_40%2F65f51dfb7e4304_52356170processed_720_8f014fcc8a&amp;amp;w=384&amp;amp;q=75"/&gt;
-                        </noscript>
                       </span>
                     </div>
                   </div>
