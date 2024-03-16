@@ -79,25 +79,6 @@ flex-direction:row;
 }
 
 .colors div {padding:8px;}
-input{
-  background: transparent;
-  padding-block: 5px;
-  padding-inline: 15px;
-}
-input[type='checkbox']{
-  height: 1.2rem;
-  width: 1.2rem;
-}
-
-input{
-  background: transparent;
-  padding-block: 5px;
-  padding-inline: 15px;
-}
-input[type='checkbox']{
-  height: 1.2rem;
-  width: 1.2rem;
-}
 
 
 /* -------------- */

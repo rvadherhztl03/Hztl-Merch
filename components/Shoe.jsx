@@ -53,6 +53,7 @@ function Model({ ...props }) {
   );
 }
 
+
 function Shoe() {
   const [mesh, setMesh] = useState("#ffffff");
   const [stripes, setStripes] = useState("#ffffff");
@@ -60,7 +61,7 @@ function Shoe() {
 
   return (
     <div className="App">
-      <div className="wrapper">
+       <div className="wrapper">
         <div className="card">
           <div className="product-canvas">
             <Canvas>

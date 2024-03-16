@@ -1,6 +1,5 @@
 import { FunctionComponent } from 'react'
 // import { useOcSelector } from '../ordercloud/redux/ocStore'
-// import styles from '../styles/Home.module.css'
 import Header from '../components/Header'
 import HeroBanner from '../components/HeroBanner'
 import Description from '../components/Description'
