@@ -17,11 +17,12 @@ const OcLineItemList: FunctionComponent<OcLineItemListProps> = ({ emptyMessage, 
   const dispatch = useOcDispatch()
 
   return lineItems && lineItems.length > 0 ? (
-    <div className="py-10">
+    <div className="py-10 flex flex-col gap-3">
+      <img src="" />
       <button
         type="button"
         onClick={() => dispatch(deleteCurrentOrder())}
-        className="bg-[#7fc3ba] py-2 px-5"
+        className="bg-[#7fc3ba] py-2 px-5 text-black text-lg font-bold"
       >
         Clear Cart
       </button>
@@ -34,8 +35,8 @@ const OcLineItemList: FunctionComponent<OcLineItemListProps> = ({ emptyMessage, 
         ))}
       </ol>
       {/* Checkout Button */}
-      <Link href="/checkout">
-        <a className="bg-[#7fc3ba] py-2 px-5  flex items-center gap-2">
+      <Link href="/checkout" className="text-center">
+        <a className="bg-[#7fc3ba] py-2 px-5 block flex items-center gap-2 text-center text-black text-lg justify-center font-bold ">
           Checkout
           {/* <HiArrowLongRight className="inline-block" /> */}
         </a>

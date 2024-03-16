@@ -56,7 +56,7 @@ const OcCheckoutBilling: FunctionComponent<OcCheckoutStepProps> = ({ onNext, onP
 
   return initialized && order ? (
     <div>
-      <h2>Billing</h2>
+      <h2 className="2xl">Billing</h2>
       <label htmlFor="SameAsShipping">
         <input
           type="checkbox"
