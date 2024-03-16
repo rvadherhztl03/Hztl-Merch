@@ -306,7 +306,7 @@ function HeroBanner() {
                               <img
                                 alt="logo"
                                 borderradius={0}
-                                src='png-logo.png'
+                                src='shoe1.png'
                                 decoding="async"
                                 data-nimg="intrinsic"
                                 className="css-ftc6fr"

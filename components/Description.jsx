@@ -15,7 +15,7 @@ function Description() {
     data-name="Section"
     data-aos=""
   >
-    <img className='bg-cover w-full' src='bg-shoe.png'/>
+    <img className='bg-cover w-full' src='SHOES-3D-Commercial.gif'/>
     <div className="css-1l7c0cy" />
     <div className="MuiBox-root css-iee15d absolute">
       <div className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-lel51l">
