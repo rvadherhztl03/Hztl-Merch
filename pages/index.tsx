@@ -1,6 +1,6 @@
 import { FunctionComponent, useEffect } from 'react'
 // import { useOcSelector } from '../ordercloud/redux/ocStore'
-import Header from '../components/Header'
+// import Header from '../components/Header'
 import HeroBanner from '../components/HeroBanner'
 import Video from '../components/Video'
 import Description from '../components/Description'
@@ -28,7 +28,6 @@ useEffect(() => {
 
   return (
     <>
-      <Header />
       <HeroBanner />
       <Video />
       <Description />

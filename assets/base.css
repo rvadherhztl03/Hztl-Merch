@@ -4,18 +4,11 @@
 
 @layer base {
   @font-face {
-    font-family: 'Modern Era';
+    font-family: 'Modern Era' !important;
     font-style: normal;
     font-weight: 400;
     font-display: swap;
     src: url(/fonts/ModernEra-Regular.otf) format('otf');
-  }
-  @font-face {
-    font-family: 'Modern Era';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(/fonts/ModernEra/ModernEra-Regular.otf) format('otf');
   }
 }
 
@@ -23,7 +16,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Modern Era';
+  font-family: Modern Era, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -63,7 +57,7 @@ input[type='password'] {
   justify-content: space-around;
   background-color: #201e1f;
   color: white;
-  font-family: 'Modern Era';
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .card {
@@ -105,7 +99,7 @@ b {
 body {
   margin: 0;
   color: rgba(0, 0, 0, 0.87);
-  font-family: 'Modern Era';
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5;
@@ -244,7 +238,7 @@ body::backdrop {
   font-size: 1.125rem;
   line-height: 1.4;
   letter-spacing: 0em;
-  font-family: 'Modern Era';
+  font-family: Mordern Era;
   padding-left: 5.6px;
   padding-top: 3.2px;
 }
@@ -519,7 +513,7 @@ body::backdrop {
   font-size: 2.25rem;
   line-height: 1.2;
   letter-spacing: 0em;
-  font-family: 'Modern Era';
+  font-family: Inter;
   text-align: left;
 }
 
@@ -547,7 +541,7 @@ body::backdrop {
   font-size: 1rem;
   line-height: 1.5;
   letter-spacing: 0em;
-  font-family: 'Modern Era';
+  font-family: Inter;
   text-align: left;
 }
 
@@ -557,7 +551,7 @@ body::backdrop {
   font-size: 1.0625rem;
   line-height: 1.5;
   letter-spacing: 0em;
-  font-family: 'Modern Era';
+  font-family: Inter;
   text-align: left;
 }
 
@@ -680,7 +674,7 @@ body::backdrop {
   line-height: 1.429;
   letter-spacing: 0em;
   text-transform: none;
-  font-family: 'Modern Era';
+  font-family: Inter;
   min-width: 64px;
   padding: 8px 22px;
   border-radius: 4px;
@@ -814,7 +808,7 @@ body::backdrop {
   line-height: 1.429;
   letter-spacing: 0em;
   text-transform: none;
-  font-family: 'Modern Era';
+  font-family: Inter;
   min-width: 64px;
   padding: 7px 21px;
   border-radius: 4px;
@@ -1043,7 +1037,7 @@ body::backdrop {
   font-size: 2rem;
   line-height: 1.2;
   letter-spacing: 0em;
-  font-family: 'Modern Era';
+  font-family: Inter;
   text-align: left;
 }
 
@@ -1284,7 +1278,7 @@ body::backdrop {
   font-size: 1.75rem;
   line-height: 1.2;
   letter-spacing: 0em;
-  font-family: 'Modern Era';
+  font-family: Inter;
   text-align: center;
 }
 
@@ -1594,7 +1588,7 @@ body::backdrop {
   font-size: 1.125rem;
   line-height: 1.4;
   letter-spacing: 0em;
-  font-family: 'Modern Era';
+  font-family: Inter;
   text-align: center;
 }
 
@@ -1622,7 +1616,7 @@ body::backdrop {
   font-size: 1rem;
   line-height: 1.5;
   letter-spacing: 0em;
-  font-family: 'Modern Era';
+  font-family: Inter;
   text-align: center;
 }
 
@@ -1826,7 +1820,7 @@ body::backdrop {
   font-size: 1.0625rem;
   line-height: 1.5;
   letter-spacing: 0em;
-  font-family: 'Modern Era';
+  font-family: Inter;
   text-align: center;
 }
 
@@ -1854,7 +1848,7 @@ body::backdrop {
   font-size: 2rem;
   line-height: 1.2;
   letter-spacing: 0em;
-  font-family: 'Modern Era';
+  font-family: Inter;
   text-align: center;
 }
 
@@ -1914,7 +1908,7 @@ body::backdrop {
   line-height: 1.429;
   letter-spacing: 0em;
   text-transform: none;
-  font-family: 'Modern Era';
+  font-family: Inter;
   min-width: 64px;
   padding: 8px 22px;
   border-radius: 4px;
@@ -2048,7 +2042,7 @@ body::backdrop {
   line-height: 1.429;
   letter-spacing: 0em;
   text-transform: none;
-  font-family: 'Modern Era';
+  font-family: Inter;
   min-width: 64px;
   padding: 7px 21px;
   border-radius: 4px;
@@ -2279,7 +2273,7 @@ body::backdrop {
   font-size: 0.875rem;
   line-height: 1.5;
   letter-spacing: 0em;
-  font-family: 'Modern Era';
+  font-family: Inter;
   text-align: center;
 }
 
@@ -2433,7 +2427,7 @@ body::backdrop {
 
 .css-1ai6a78 {
   margin: 0;
-  font-family: 'Mordern Era';
+  font-family: 'Mordern Era', 'Helvetica', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.75;
