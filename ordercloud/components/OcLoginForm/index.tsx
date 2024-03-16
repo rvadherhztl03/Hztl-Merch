@@ -54,47 +54,50 @@ const OcLoginForm: FunctionComponent<OcLoginFormProps> = ({
   }, [isAnonymous, onLoggedIn])
 
   return (
-    <form name="ocLoginForm" onSubmit={handleSubmit}>
-      <h1>{title}</h1>
-      {error && <p>{error.message}</p>}
-      <label htmlFor="identifier">
-        Username
-        <input
-          type="text"
-          id="identifier"
-          name="identifier"
-          placeholder="Enter username"
-          value={formValues.identifier}
-          onChange={handleInputChange('identifier')}
-          required
-        />
-      </label>
-      <label htmlFor="password">
-        Password
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Enter password"
-          value={formValues.password}
-          onChange={handleInputChange('password')}
-          required
-        />
-      </label>
-      <label htmlFor="remember">
-        <input
-          type="checkbox"
-          id="remember"
-          name="remember"
-          checked={formValues.remember}
-          onChange={handleCheckboxChange('remember')}
-        />
-        Keep me logged in
-      </label>
-      <button disabled={loading} type="submit">
-        Submit
-      </button>
-    </form>
+    <div className="container mx-auto bg-[#2f2d2e]">
+      <form name="ocLoginForm" onSubmit={handleSubmit}>
+        <h1>{title}</h1>
+        {error && <p>{error.message}</p>}
+        <label htmlFor="identifier">
+          Username
+          <input
+            type="text"
+            id="identifier"
+            name="identifier"
+            placeholder="Enter username"
+            value={formValues.identifier}
+            onChange={handleInputChange('identifier')}
+            required
+          />
+        </label>
+        <label htmlFor="password">
+          Password
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter password"
+            value={formValues.password}
+            onChange={handleInputChange('password')}
+            required
+          />
+        </label>
+        <label htmlFor="remember">
+          <input
+            type="checkbox"
+            id="remember"
+            name="remember"
+            checked={formValues.remember}
+            onChange={handleCheckboxChange('remember')}
+          />
+          Keep me logged in
+        </label>
+        <button disabled={loading} type="submit">
+          Submit
+        </button>
+      </form>
+      <div></div>
+    </div>
   )
 }
 
