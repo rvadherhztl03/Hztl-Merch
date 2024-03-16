@@ -153,7 +153,7 @@ export default function registration() {
             </h1>
           </div>
         </div>
-        <div className="w-full lg:w-1/2  flex items-center lg:py-0 py-10">
+        <div className="w-full lg:w-3/4  flex items-center lg:py-0 py-10">
           <form
             name="ocRegistrationForm"
             onSubmit={handleSubmit}

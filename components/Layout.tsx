@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { FunctionComponent } from 'react'
+import { FunctionComponent, useEffect } from 'react'
 import logout from '../ordercloud/redux/ocAuth/logout'
 import { useOcDispatch, useOcSelector } from '../ordercloud/redux/ocStore'
 // import { Button } from '../@/components/ui/button'
@@ -15,6 +15,18 @@ const Layout: FunctionComponent = ({ children }) => {
     lineItemCount: s.ocCurrentOrder.order ? s.ocCurrentOrder.order.LineItemCount : 0,
   }))
 
+  useEffect(() => {
+    function twak(){
+      const s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/65f5c632cc1376635adb5b4b/1hp40se6a';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+      }
+  twak()
+  }, [])
+
   return (
     <>
       <Head>
@@ -25,7 +37,7 @@ const Layout: FunctionComponent = ({ children }) => {
         {/* <h1 className="text-red-200">React Headstart</h1>
           <p>{`Cart Count ${lineItemCount}`}</p> */}
         <nav className="flex justify-end min-h-[80px]">
-          <div className="flex w-full justify-between py-3 shadow-md fixed pb-4 mb-4 z-20 bg-black font-bold font-morderEra items-center px-8 text-white">
+          <div className="flex w-full justify-between py-3 shadow-md fixed pb-4 mb-4 z-20 bg-[#000000db] font-bold font-morderEra items-center px-8 text-white">
             <div className="px-4 py-1  transition duration-300 ">
               {' '}
               <img src="white-png-logo.png" className="w-[100px]" />
