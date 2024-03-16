@@ -16,9 +16,12 @@ const CheckoutPage: FunctionComponent = () => {
   }, [order, initialized, push])
 
   return initialized ? (
-    <div style={{ display: 'grid', gridTemplateColumns: `1fr minmax(150px, 25%)` }}>
+    <div
+      style={{ display: 'grid', gridTemplateColumns: `1fr minmax(150px, 25%)` }}
+      className="mt-5 px-8 gap-[40px]"
+    >
       <OcCheckout onSubmitted={(orderId: string) => push(`/confirmation/${orderId}`)} />
-      <div>
+      <div className="gap-2">
         <OcLineItemList />
         <OcCheckoutSummary />
       </div>

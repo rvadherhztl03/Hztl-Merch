@@ -19,9 +19,11 @@ const OcCheckoutSummary: FunctionComponent = () => {
 
   return order ? (
     <table>
-      <tbody>
-        <tr>
-          <th>Subtotal</th>
+      <tbody className="flex flex-col gap-2 [&>tr]:flex  [&>tr]:gap-4">
+        <tr className="flex gap-4">
+          <th className="text-2xl">
+            <h1>Subtotal</h1>
+          </th>
           <td>{formatPrice(order.Subtotal)}</td>
         </tr>
         {order.PromotionDiscount ? (

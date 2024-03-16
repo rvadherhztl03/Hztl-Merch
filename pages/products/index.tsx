@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import { BuyerProduct, Filters } from 'ordercloud-javascript-sdk'
-import { FunctionComponent, useCallback } from 'react'
+import { BuyerProduct } from 'ordercloud-javascript-sdk'
+import { FunctionComponent } from 'react'
 import OcProductCard from '../../ordercloud/components/OcProductCard'
-import OcProductFacetForm from '../../ordercloud/components/OcProductFacetsForm'
 import OcProductList from '../../ordercloud/components/OcProductList'
 import useNextRouterMapping, { NextQueryMap } from '../../ordercloud/hooks/useNextRouterMapping'
+import Head from 'next/head'
 
 const queryMap: NextQueryMap = {
   search: 's',
@@ -19,34 +19,26 @@ const queryMap: NextQueryMap = {
 }
 
 const ProductListPage: FunctionComponent = () => {
-  const { isReady, options, updateQuery } = useNextRouterMapping(queryMap)
-
-  const handleFacetChange = useCallback(
-    (updatedFilters: Filters) => {
-      updateQuery({ ...options, page: undefined, filters: updatedFilters })
-    },
-    [options, updateQuery]
-  )
+  const { options } = useNextRouterMapping(queryMap)
 
   const handleRenderItem = (p: BuyerProduct) => {
     return (
       <Link href={`/products/${p.ID}`}>
-        <a>
-          <OcProductCard product={p} />
-        </a>
+        <OcProductCard product={p} />
       </Link>
     )
   }
 
   return (
-    isReady && (
-      <>
-        <h2>Facets</h2>
-        <OcProductFacetForm onChange={handleFacetChange} />
-        <h2>Products</h2>
-        <OcProductList options={options} renderItem={handleRenderItem} />
-      </>
-    )
+    // isReady && (
+
+    <>
+      <Head>
+        <title>Products | Hztl Merch</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <OcProductList options={options} renderItem={handleRenderItem} />
+    </>
   )
 }
 

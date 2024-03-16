@@ -11,14 +11,15 @@ export interface OcProductListProps {
 
 const OcProductList: FunctionComponent<OcProductListProps> = ({ options, renderItem }) => {
   const products = useOcProductList(options)
-
   return (
-    <ol>
+    <div className="flex gap-4 justify-center flex-wrap gap-y-[40px]">
       {products &&
         products.map((p) => (
-          <li key={p.ID}>{renderItem ? renderItem(p) : <OcProductCard product={p} />}</li>
+          <div className="flex" key={p.ID}>
+            {renderItem ? renderItem(p) : <OcProductCard product={p} />}
+          </div>
         ))}
-    </ol>
+    </div>
   )
 }
 

@@ -14,6 +14,7 @@ const ProductPage: FunctionComponent = () => {
   const handleLineItemUpdated = () => {
     push('/cart')
   }
+  
 
   return (
     <>

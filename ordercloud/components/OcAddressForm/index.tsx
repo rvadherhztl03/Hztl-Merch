@@ -55,7 +55,10 @@ const OcAddressForm: FunctionComponent<OcAddressFormProps> = ({
   }, [address, formValues])
 
   return (
-    <form onSubmit={handleFormSubmit}>
+    <form
+      onSubmit={handleFormSubmit}
+      className="mt-4 [&>label]:text-xl py-4 [&>label>input]:mt-2 [&>label>input]:mb-2 [&>label>input]:outline-none [&>label>input]:w-full [&>label>input]:border-b-2 [&>label>input]:border-b-black"
+    >
       <label htmlFor={`${id}_address_addressName`}>
         Address Name
         <input
@@ -184,15 +187,31 @@ const OcAddressForm: FunctionComponent<OcAddressFormProps> = ({
           onChange={handleInputChange('Phone')}
         />
       </label>
-      <button type="button" onClick={handleDeleteAddress} disabled={hasChanges || !address.ID}>
-        Delete Address
-      </button>
-      <button type="button" onClick={handleDiscardChanges} disabled={!hasChanges}>
-        Discard Changes
-      </button>
-      <button type="submit" disabled={!hasChanges}>
-        {address && address.ID ? 'Update Address' : 'Save Address'}
-      </button>
+      <div className="flex gap-4">
+        <button
+          type="button"
+          onClick={handleDeleteAddress}
+          disabled={hasChanges || !address.ID}
+          className="bg-red-400 py-2 px-5 text-white text-lg font-bold mt-4"
+        >
+          Delete Address
+        </button>
+        <button
+          type="button"
+          onClick={handleDiscardChanges}
+          disabled={!hasChanges}
+          className="bg-[#7fc3ba] py-2 px-5 text-white text-lg font-bold mt-4"
+        >
+          Discard Changes
+        </button>
+        <button
+          type="submit"
+          disabled={!hasChanges}
+          className="bg-[#7fc3ba] py-2 px-5 text-white text-lg font-bold mt-4"
+        >
+          <span className="mt-4">{address && address.ID ? 'Update Address' : 'Save Address'}</span>
+        </button>
+      </div>
     </form>
   )
 }
