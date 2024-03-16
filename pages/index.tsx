@@ -1,10 +1,10 @@
 import { FunctionComponent } from 'react'
-import { useOcSelector } from '../ordercloud/redux/ocStore'
+// import { useOcSelector } from '../ordercloud/redux/ocStore'
 // import styles from '../styles/Home.module.css'
-import Shoe from '../components/Shoe'
 import Header from '../components/Header'
 import HeroBanner from '../components/HeroBanner'
 import Description from '../components/Description'
+import Shoe from '../components/Shoe'
 import Design from '../components/Design'
 import Benefits from '../components/Benefits'
 import TeamMembers from '../components/TeamMembers'
@@ -13,7 +13,7 @@ import Footer from '../components/Footer'
 import React from 'react'
 
 const Home: FunctionComponent = () => {
-  const user = useOcSelector((s) => s.ocUser.user)
+  // const user = useOcSelector((s) => s.ocUser.user)
 
   return (
     <>
