@@ -22,30 +22,41 @@ const Layout: FunctionComponent = ({ children }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
-        <h1 className=''>React Headstart</h1>
-        <p>{`Cart Count ${lineItemCount}`}</p>
-        <nav>
-          <Link href="/" className="bg-slate-400">
-            <a>Home</a>
-          </Link>
-          <Link href="/cart">
-            <a>Cart</a>
-          </Link>
-          <Link href="/products">
-            <a>Products</a>
-          </Link>
-          {isAnonymous ? (
-            <Link href="/login">
-              <a>Login</a>
-            </Link>
-          ) : (
-            <Button disabled={loading} onClick={() => dispatch(logout())} variant="ghost">
-              Logout
-            </Button>
-          )}
-          {!isAnonymous && user && <p>{`${user.FirstName} ${user.LastName}`}</p>}
+        {/* <h1 className="text-red-200">React Headstart</h1>
+          <p>{`Cart Count ${lineItemCount}`}</p> */}
+        <nav className="flex justify-end min-h-[80px]">
+          <ul className="flex w-full justify-end py-3 shadow-md fixed pb-4 mb-4 ">
+            <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2 border-white">
+              <Link href="/">Home</Link>
+            </li>
+            <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2 border-white">
+              <Link href="/cart">
+                <p>Cart {lineItemCount}</p>
+              </Link>
+            </li>
+            <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2 border-white">
+              <Link href="/products">Products</Link>
+            </li>
+
+            {isAnonymous ? (
+              <>
+                <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2 border-white">
+                  <Link href="/registration">Registration</Link>
+                </li>
+                <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2 border-white">
+                  <Link href="/login">Login</Link>
+                </li>
+              </>
+            ) : (
+              <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2 border-white">
+                <button disabled={loading} onClick={() => dispatch(logout())}>
+                  Logout
+                </button>
+              </li>
+            )}
+            {/* {!isAnonymous && user && <p>{`${user.FirstName} ${user.LastName}`}</p>} */}
+          </ul>
         </nav>
-        <Button>Hello</Button>
       </header>
       <main>{children}</main>
     </>
