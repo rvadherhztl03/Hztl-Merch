@@ -71,9 +71,17 @@ function Shoe() {
         <div className="card w-1/2 relative">
           <h2 className="mb-5 text-4xl drop-shadow-xl text-center">Customize your Shoes</h2>
           <div className="absolute top-0 right-0 flex items-center flex-col">
-            <button>
+            <button
+              className='bg-gray-500 p-4 rounded-full'
+              onClick={() => {
+                setMesh('#' + (((1 << 24) * Math.random()) | 0).toString(16).padStart(6, '0'))
+                setStripes('#' + (((1 << 24) * Math.random()) | 0).toString(16).padStart(6, '0'))
+                setSoul('#' + (((1 << 24) * Math.random()) | 0).toString(16).padStart(6, '0'))
+              }}
+            >
               <IoMdRefresh className="text-xl cursor-pointer" />
             </button>
+            
             <span className="text-gray-500 text-sm">Click to Generate Random Colors</span>
           </div>
           <div className="product-canvas">

@@ -156,13 +156,14 @@ function StandOut() {
                           href="/"
                         >
                           <button
-                            className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeLarge MuiButton-outlinedSizeLarge MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeLarge MuiButton-outlinedSizeLarge MuiButton-disableElevation css-10hsclc"
+                            className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeLarge MuiButton-outlinedSizeLarge MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeLarge MuiButton-outlinedSizeLarge MuiButton-disableElevation css-10hsclc !font-bold"
                             tabIndex={0}
                             type="button"
                             justifycontent="undefined"
                             colorbutton="[object Object]"
                             background="#42CFA5"
                             text="CONTACT"
+                            style={{color: '#ffffff'}}
                           >
                             CONTACT
                           </button>
