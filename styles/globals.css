@@ -32,3 +32,13 @@ input[type='text'],
 input[type='password'] {
   display: block;
 }
+
+input{
+  background: transparent;
+  padding-block: 5px;
+  padding-inline: 15px;
+}
+input[type='checkbox']{
+  height: 1.2rem;
+  width: 1.2rem;
+}
