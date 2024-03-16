@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react'
 // import { useOcSelector } from '../ordercloud/redux/ocStore'
-import Header from '../components/Header'
+// import Header from '../components/Header'
 import HeroBanner from '../components/HeroBanner'
 import Description from '../components/Description'
 import Shoe from '../components/Shoe'
@@ -16,7 +16,6 @@ const Home: FunctionComponent = () => {
 
   return (
     <>
-      <Header />
       <HeroBanner />
       <Description />
       <Design />

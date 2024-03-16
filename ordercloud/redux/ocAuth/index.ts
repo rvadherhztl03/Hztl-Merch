@@ -18,6 +18,7 @@ const initialState: OcAuthState = {
   isAuthenticated: false,
   isAnonymous: true,
   loading: false,
+  error: {},
   initialized: false,
 }
 
@@ -29,7 +30,6 @@ const ocAuthSlice = createSlice({
       const initialAccessToken = Tokens.GetAccessToken()
       let isAnonymous = true
       let decodedToken
-
       if (initialAccessToken) {
         decodedToken = parseJwt(initialAccessToken)
         isAnonymous = !!decodedToken.orderid
@@ -48,7 +48,6 @@ const ocAuthSlice = createSlice({
     })
     builder.addCase(registrationUser.fulfilled, (state) => {
       state.isAnonymous = false
-
       state.loading = false
     })
     builder.addCase(registrationUser.rejected, (state, action) => {

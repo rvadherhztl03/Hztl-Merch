@@ -25,7 +25,7 @@ const Layout: FunctionComponent = ({ children }) => {
         {/* <h1 className="text-red-200">React Headstart</h1>
           <p>{`Cart Count ${lineItemCount}`}</p> */}
         <nav className="flex justify-end min-h-[80px]">
-          <ul className="flex w-full justify-end py-3 shadow-md fixed pb-4 mb-4 ">
+          <ul className="flex w-full justify-end py-3 shadow-md fixed pb-4 mb-4 z-20 bg-white">
             <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2 border-white">
               <Link href="/">Home</Link>
             </li>
