@@ -18,44 +18,50 @@ const Layout: FunctionComponent = ({ children }) => {
   return (
     <>
       <Head>
-        <title>React Headstart</title>
+        <title>Hztl Merch</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
         {/* <h1 className="text-red-200">React Headstart</h1>
           <p>{`Cart Count ${lineItemCount}`}</p> */}
         <nav className="flex justify-end min-h-[80px]">
-          <ul className="flex w-full justify-end py-3 shadow-md fixed pb-4 mb-4 z-20 bg-white">
-            <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2 border-white">
-              <Link href="/">Home</Link>
-            </li>
-            <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2 border-white">
-              <Link href="/cart">
-                <p>Cart {lineItemCount}</p>
-              </Link>
-            </li>
-            <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2 border-white">
-              <Link href="/products">Products</Link>
-            </li>
-
-            {isAnonymous ? (
-              <>
-                <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2 border-white">
-                  <Link href="/registration">Registration</Link>
-                </li>
-                <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2 border-white">
-                  <Link href="/login">Login</Link>
-                </li>
-              </>
-            ) : (
-              <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2 border-white">
-                <button disabled={loading} onClick={() => dispatch(logout())}>
-                  Logout
-                </button>
+          <div className="flex w-full justify-between py-3 shadow-md fixed pb-4 mb-4 z-20 bg-black font-bold font-morderEra items-center px-8 text-white">
+            <div className="px-4 py-1  transition duration-300 ">
+              {' '}
+              <img src="white-png-logo.png" className="w-[100px]" />
+            </div>
+            <ul className={'flex'}>
+              <li className="px-4 py-1  hover:border-[#7fc3ba] transition duration-300 border-b-2 border-black">
+                <Link href="/">Home</Link>
               </li>
-            )}
+              <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2border-black">
+                <Link href="/cart">
+                  <p>Cart {lineItemCount}</p>
+                </Link>
+              </li>
+              <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2border-black">
+                <Link href="/products">Products</Link>
+              </li>
+
+              {isAnonymous ? (
+                <>
+                  <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2border-black">
+                    <Link href="/registration">Registration</Link>
+                  </li>
+                  <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2border-black">
+                    <Link href="/login">Login</Link>
+                  </li>
+                </>
+              ) : (
+                <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2border-black">
+                  <button disabled={loading} onClick={() => dispatch(logout())}>
+                    Logout
+                  </button>
+                </li>
+              )}
+            </ul>
             {/* {!isAnonymous && user && <p>{`${user.FirstName} ${user.LastName}`}</p>} */}
-          </ul>
+          </div>
         </nav>
       </header>
       <main>{children}</main>

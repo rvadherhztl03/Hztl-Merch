@@ -1,5 +1,5 @@
 import { PriceSchedule, RequiredDeep } from 'ordercloud-javascript-sdk'
-import { ChangeEvent, FunctionComponent } from 'react'
+import { FunctionComponent } from 'react'
 
 interface OcQuantityInputProps {
   controlId: string
@@ -12,24 +12,22 @@ interface OcQuantityInputProps {
 
 const OcQuantityInput: FunctionComponent<OcQuantityInputProps> = ({
   controlId,
-  priceSchedule,
   label = 'Quantity',
-  disabled,
   quantity,
   onChange,
 }) => {
-  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-    onChange(Number(e.target.value))
-  }
+  // const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+  //   onChange(Number(e.target.value))
+  // }
 
-  const handleSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    onChange(Number(e.target.value))
-  }
+  // const handleSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
+  //   onChange(Number(e.target.value))
+  // }
 
   return (
     <label htmlFor={controlId}>
-      {label}
-      {priceSchedule.RestrictedQuantity ? (
+      <span className="mr-4">{label}</span>
+      {/* {priceSchedule.RestrictedQuantity ? (
         // eslint-disable-next-line
         <select id={controlId} disabled={disabled} value={quantity} onChange={handleSelectChange}>
           {priceSchedule.PriceBreaks.map((pb) => (
@@ -49,7 +47,16 @@ const OcQuantityInput: FunctionComponent<OcQuantityInputProps> = ({
           value={quantity}
           onChange={handleInputChange}
         />
+      )} */}
+      {quantity > 0 && (
+        <button className="px-2 py-1 bg-yellow-200 mx-1" onClick={() => onChange(quantity - 1)}>
+          -
+        </button>
       )}
+      {quantity}
+      <button className="px-2 py-1 bg-yellow-200 mx-1" onClick={() => onChange(quantity + 1)}>
+        +
+      </button>
     </label>
   )
 }
