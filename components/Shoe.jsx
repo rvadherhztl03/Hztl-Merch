@@ -1,12 +1,13 @@
 import React from 'react'
-import "../styles/Home.module.css";
-import { Suspense, useRef, useState } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, useGLTF } from "@react-three/drei";
+import '../styles/Home.module.css'
+import { Suspense, useRef, useState } from 'react'
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls, useGLTF } from '@react-three/drei'
+import { IoMdRefresh } from 'react-icons/io'
 
 function Model({ ...props }) {
-  const group = useRef();
-  const { nodes, materials } = useGLTF("/shoe.gltf");
+  const group = useRef()
+  const { nodes, materials } = useGLTF('/shoe.gltf')
   return (
     <group ref={group} {...props} dispose={null} scale={3}>
       <mesh
@@ -50,19 +51,39 @@ function Model({ ...props }) {
         material-color={props.customColors.soul}
       />
     </group>
-  );
+  )
 }
 
-
 function Shoe() {
-  const [mesh, setMesh] = useState("#ffffff");
-  const [stripes, setStripes] = useState("#ffffff");
-  const [soul, setSoul] = useState("#ffffff");
+  const [mesh, setMesh] = useState(
+    '#' + (((1 << 24) * Math.random()) | 0).toString(16).padStart(6, '0')
+  )
+  const [stripes, setStripes] = useState(
+    '#' + (((1 << 24) * Math.random()) | 0).toString(16).padStart(6, '0')
+  )
+  const [soul, setSoul] = useState(
+    '#' + (((1 << 24) * Math.random()) | 0).toString(16).padStart(6, '0')
+  )
 
   return (
     <div className="App">
-       <div className="wrapper">
-        <div className="card">
+      <div className="wrapper">
+        <div className="card w-1/2 relative">
+          <h2 className="mb-5 text-4xl drop-shadow-xl text-center">Customize your Shoes</h2>
+          <div className="absolute top-0 right-0 flex items-center flex-col">
+            <button
+              className='bg-gray-500 p-4 rounded-full'
+              onClick={() => {
+                setMesh('#' + (((1 << 24) * Math.random()) | 0).toString(16).padStart(6, '0'))
+                setStripes('#' + (((1 << 24) * Math.random()) | 0).toString(16).padStart(6, '0'))
+                setSoul('#' + (((1 << 24) * Math.random()) | 0).toString(16).padStart(6, '0'))
+              }}
+            >
+              <IoMdRefresh className="text-xl cursor-pointer" />
+            </button>
+            
+            <span className="text-gray-500 text-sm">Click to Generate Random Colors</span>
+          </div>
           <div className="product-canvas">
             <Canvas>
               <Suspense fallback={null}>
@@ -74,19 +95,12 @@ function Shoe() {
                   position={[10, 15, 10]}
                   castShadow
                 />
-                <Model
-                  customColors={{ mesh: mesh, stripes: stripes, soul: soul }}
-                />
-                <OrbitControls
-                  enablePan={true}
-                  enableZoom={true}
-                  enableRotate={true}
-                />
+                <Model customColors={{ mesh: mesh, stripes: stripes, soul: soul }} />
+                <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
               </Suspense>
             </Canvas>
           </div>
-          <h2>Color chooser</h2>
-          <div className="colors">
+          <div className="flex justify-evenly [&>div]:flex [&>div]:flex-col [&>div>input]:w-20 [&>div>input]:h-14 [&>div>input]:bg-transparent  [&>div]:items-center">
             <div>
               <input
                 type="color"
@@ -94,10 +108,10 @@ function Shoe() {
                 name="mesh"
                 value={mesh}
                 onChange={(e) => setMesh(e.target.value)}
+                className="bg-transparent"
               />
-              <label for="mesh">Main</label>
+              <label for="mesh">Primary</label>
             </div>
-
             <div>
               <input
                 type="color"
@@ -106,7 +120,7 @@ function Shoe() {
                 value={stripes}
                 onChange={(e) => setStripes(e.target.value)}
               />
-              <label for="stripes">Stripes</label>
+              <label for="stripes">Secondary</label>
             </div>
             <div>
               <input
@@ -116,13 +130,13 @@ function Shoe() {
                 value={soul}
                 onChange={(e) => setSoul(e.target.value)}
               />
-              <label for="soul">Soul</label>
+              <label for="soul">Sole</label>
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default Shoe;
+export default Shoe
