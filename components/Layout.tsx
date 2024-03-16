@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { FunctionComponent } from 'react'
 import logout from '../ordercloud/redux/ocAuth/logout'
 import { useOcDispatch, useOcSelector } from '../ordercloud/redux/ocStore'
+import { Button } from '../@/components/ui/button'
 
 const Layout: FunctionComponent = ({ children }) => {
   const dispatch = useOcDispatch()
@@ -21,10 +22,10 @@ const Layout: FunctionComponent = ({ children }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
-        <h1>React Headstart</h1>
+        <h1 className=''>React Headstart</h1>
         <p>{`Cart Count ${lineItemCount}`}</p>
         <nav>
-          <Link href="/">
+          <Link href="/" className="bg-slate-400">
             <a>Home</a>
           </Link>
           <Link href="/cart">
@@ -38,12 +39,13 @@ const Layout: FunctionComponent = ({ children }) => {
               <a>Login</a>
             </Link>
           ) : (
-            <button type="button" disabled={loading} onClick={() => dispatch(logout())}>
+            <Button disabled={loading} onClick={() => dispatch(logout())} variant="ghost">
               Logout
-            </button>
+            </Button>
           )}
           {!isAnonymous && user && <p>{`${user.FirstName} ${user.LastName}`}</p>}
         </nav>
+        <Button>Hello</Button>
       </header>
       <main>{children}</main>
     </>
