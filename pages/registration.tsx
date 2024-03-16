@@ -138,7 +138,7 @@ export default function registration() {
   }
 
   return (
-    <div className="bg-[#2f2d2e] text-white  overflow-hidden">
+    <div className="bg-[#2f2d2e] text-white  h-[100vh] -mt-20 overflow-hidden">
       <div className="flex flex-col lg:flex-row">
         <div className="w-full lg:w-1/2 relative overflow-hidden">
           <img
@@ -146,14 +146,14 @@ export default function registration() {
             alt=""
             className="absolute top-0 z-0 opacity-50 object-cover h-full w-full bg-center"
           />
-          <div className="w-3/4 lg:w-1/2 ps-5 py-5">
+          <div className="w-3/4 lg:w-1/3 mt-20 pt-32 ps-5 py-5">
             <h1 className="text-5xl lg:text-8xl z-10 relative leading-tight">
               FIND THE HZTL MERCH THAT SUITS{' '}
               <em className="text-6xl lg:text-8xl underline"> YOU</em>
             </h1>
           </div>
         </div>
-        <div className="w-full lg:w-1/2  flex items-center lg:py-0 py-10">
+        <div className="w-full lg:w-3/4  flex items-center lg:py-0 py-10">
           <form
             name="ocRegistrationForm"
             onSubmit={handleSubmit}
