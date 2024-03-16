@@ -88,19 +88,19 @@ function UserReviews() {
           <SplideTrack>
             {usersReviewArray.map((user, index) => (
               <SplideSlide key={index}>
-                <div>
+                <div className='!h-full'>
                   <div
                     key={index}
-                    className="MuiGrid-root MuiGrid-direction-xs-column MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 MuiGrid-grid-lg-4 MuiBox-root css-kyjunr !max-w-[35vw] !h-[70vh]"
+                    className="MuiGrid-root MuiGrid-direction-xs-column MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 MuiGrid-grid-lg-4 MuiBox-root css-kyjunr !max-w-[35vw] !h-full"
                     data-aos=""
                     data-name="Card"
                   >
                     <div
-                      className="MuiGrid-root MuiGrid-direction-xs-column css-316kc6"
+                      className="MuiGrid-root MuiGrid-direction-xs-column css-316kc6 !h-full"
                       style={{ flexGrow: 1 }}
                     >
                       <div
-                        className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root css-1pa2qyg"
+                        className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root css-1pa2qyg !h-full"
                         style={{
                           backgroundColor: '#31837A',
                           borderRadius: 10,
@@ -108,9 +108,9 @@ function UserReviews() {
                           overflow: 'visible',
                         }}
                       >
-                        <div className="MuiCardContent-root flex-direction-column container-block css-xadw4u">
+                        <div className="MuiCardContent-root flex-direction-column container-block css-xadw4u !h-full">
                           <div
-                            className="MuiGrid-root flex-direction-column container-block MuiGrid-zeroMinWidth MuiGrid-direction-xs-column MuiBox-root css-1xut5k7"
+                            className="MuiGrid-root flex-direction-column container-block MuiGrid-zeroMinWidth MuiGrid-direction-xs-column MuiBox-root css-1xut5k7 !h-full"
                             style={{
                               zIndex: 2,
                               height: '100%',

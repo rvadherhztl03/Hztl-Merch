@@ -83,32 +83,10 @@ function HeroBanner() {
                           className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-disableElevation css-tl0pzq"
                           tabIndex={0}
                           type="button"
-                          justifycontent="undefined"
-                          colorbutton="[object Object]"
                           background="#ffffff"
-                          text="Create%20My%20Custom%20T-Shit"
                         >
                           <a style={{ display: 'contents' }} className="" href="/products">
                             Create Custom Product
-                          </a>
-                        </button>
-                      </div>
-                      <div
-                        className="MuiGrid-root MuiBox-root css-1aynx6h"
-                        data-aos=""
-                        data-name="Button"
-                      >
-                        <button
-                          className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeLarge MuiButton-outlinedSizeLarge MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeLarge MuiButton-outlinedSizeLarge MuiButton-disableElevation css-py6qz6"
-                          tabIndex={0}
-                          type="button"
-                          justifycontent="undefined"
-                          colorbutton="[object Object]"
-                          background="#ffffff"
-                          text="CONTACT"
-                        >
-                          <a style={{ display: 'contents' }} className="font-semibold" href="/">
-                            CONTACT
                           </a>
                         </button>
                       </div>

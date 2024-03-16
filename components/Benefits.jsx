@@ -16,7 +16,7 @@ function Benefits() {
       data-aos=""
     >
       <div className="css-1l7c0cy" />
-      <div className="MuiBox-root css-iee15d">
+      <div className="MuiBox-root css-iee15d !p-0">
         <div className="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-lel51l">
           <div
             className="MuiGrid-root flex-direction-row container-block MuiGrid-container MuiGrid-zeroMinWidth MuiBox-root css-w99kyc"
