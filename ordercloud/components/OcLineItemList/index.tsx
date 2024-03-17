@@ -18,29 +18,30 @@ const OcLineItemList: FunctionComponent<OcLineItemListProps> = ({ emptyMessage, 
 
   return lineItems && lineItems.length > 0 ? (
     <div className="py-10 flex flex-col gap-3">
-      <img src="" />
-      <button
-        type="button"
-        onClick={() => dispatch(deleteCurrentOrder())}
-        className="bg-[#7fc3ba] py-2 px-5 text-black text-lg font-bold"
-      >
-        Clear Cart
-      </button>
       {/* Product list */}
-      <ol>
+      <ol className="flex flex-col gap-[40px]">
         {lineItems.map((li) => (
           <li key={li.ID}>
             <OcLineItemCard lineItem={li} editable={editable} />
           </li>
         ))}
       </ol>
-      {/* Checkout Button */}
-      <Link href="/checkout" className="text-center">
-        <a className="bg-[#7fc3ba] py-2 px-5 block flex items-center gap-2 text-center text-black text-lg justify-center font-bold ">
-          Checkout
-          {/* <HiArrowLongRight className="inline-block" /> */}
-        </a>
-      </Link>
+      <div className="flex gap-6">
+        <button
+          type="button"
+          onClick={() => dispatch(deleteCurrentOrder())}
+          className="bg-[#7fc3ba] py-2 px-5 text-black text-lg font-bold"
+        >
+          Clear Cart
+        </button>
+        {/* Checkout Button */}
+        <Link href="/checkout" className="text-center">
+          <a className="bg-[#7fc3ba] py-2 px-5 block flex items-center gap-2 text-center text-black text-lg justify-center font-bold ">
+            Checkout
+            {/* <HiArrowLongRight className="inline-block" /> */}
+          </a>
+        </Link>
+      </div>
     </div>
   ) : (
     <div className="flex flex-col gap-5">

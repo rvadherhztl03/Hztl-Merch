@@ -39,52 +39,57 @@ const OcLineItemCard: FunctionComponent<OcLineItemCardProps> = ({ lineItem, edit
   }, [lineItem, disabled, quantity])
 
   return (
-    <div>
-      <p>
-        <b>{lineItem.Product.Name}</b>
-        {lineItem.Specs.map((s) => (
-          <span key={s.SpecID}>
-            <br />
-            {`${s.Name}: ${s.Value}`}
-          </span>
-        ))}
-      </p>
+    <div className="flex">
+      <div className="flex gap-[40px]">
+        <div>
+          <img src={lineItem?.Product?.xp?.Images[0]} className="w-[100px]" />
+        </div>
+        <div>
+          <b>{lineItem.Product.Name}</b>
+          {lineItem.Specs.map((s) => (
+            <span key={s.SpecID}>
+              <br />
+              {`${s.Name}: ${s.Value}`}
+            </span>
+          ))}
 
-      {editable ? (
-        <>
-          <button
-            aria-label="Remove Line Item"
-            type="button"
-            disabled={disabled}
-            onClick={handleRemoveLineItem}
-          >
-            Remove
-          </button>
-          <Link href={`/products/${lineItem.ProductID}?lineitem=${lineItem.ID}`}>
-            <a aria-label="Edit Line Item">Edit</a>
-          </Link>
-          {product && (
-            <form onSubmit={handleUpdateLineItem}>
-              <OcQuantityInput
-                controlId={`${lineItem.ID}_quantity`}
-                quantity={quantity}
-                disabled={disabled}
-                onChange={setQuantity}
-                priceSchedule={product.PriceSchedule}
-              />
+          {editable ? (
+            <>
               <button
-                type="submit"
-                aria-label="Update Line Item Quantity"
-                disabled={isUpdateDisabled}
+                aria-label="Remove Line Item"
+                type="button"
+                disabled={disabled}
+                onClick={handleRemoveLineItem}
               >
-                Update
+                Remove
               </button>
-            </form>
+              <Link href={`/products/${lineItem.ProductID}?lineitem=${lineItem.ID}`}>
+                <a aria-label="Edit Line Item">Edit</a>
+              </Link>
+              {product && (
+                <form onSubmit={handleUpdateLineItem}>
+                  <OcQuantityInput
+                    controlId={`${lineItem.ID}_quantity`}
+                    quantity={quantity}
+                    disabled={disabled}
+                    onChange={setQuantity}
+                    priceSchedule={product.PriceSchedule}
+                  />
+                  <button
+                    type="submit"
+                    aria-label="Update Line Item Quantity"
+                    disabled={isUpdateDisabled}
+                  >
+                    Update
+                  </button>
+                </form>
+              )}
+            </>
+          ) : (
+            <p>{`Quantity: ${lineItem.Quantity}`}</p>
           )}
-        </>
-      ) : (
-        <p>{`Quantity: ${lineItem.Quantity}`}</p>
-      )}
+        </div>
+      </div>
     </div>
   )
 }
