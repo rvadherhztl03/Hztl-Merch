@@ -74,7 +74,7 @@ const OcLoginForm: FunctionComponent<OcLoginFormProps> = ({
             className="flex gap-6 flex-col w-full lg:[&>label]:self-center  [&>label]:w-full px-7"
           >
             <h1 className=" text-3xl lg:text-6xl text-center font-bold">{title}</h1>
-            {error && <p>{error.message}</p>}
+            {error && error?.message !== 'invalid' && <p>{error.message}</p>}
             <label htmlFor="identifier">
               <input
                 type="text"
