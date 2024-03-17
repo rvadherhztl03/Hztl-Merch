@@ -57,6 +57,8 @@ const OcProductDetail: FunctionComponent<OcProductDetailProps> = ({
 
   const [quantity, setQuantity] = useState(lineItem ? lineItem.Quantity : 0)
 
+  const [currentPic, setCurrentPic] = useState(product?.xp?.Images[0])
+
   const handleSpecFieldChange = (values: { SpecID: string; OptionID?: string; Value?: string }) => {
     setSpecValues((sv) =>
       sv.map((s) => {
@@ -148,7 +150,7 @@ const OcProductDetail: FunctionComponent<OcProductDetailProps> = ({
               {product?.Name == 'Nike Shoe' ? (
                 <Shoe />
               ) : (
-                <img src={product.xp.Images[0]} className="w-full relative z-10" alt="" />
+                <img src={currentPic} className="w-full relative z-10" alt="" />
               )}
               {/* <div className="border-4 border-yellow-200 absolute top-10 bottom-10 left-10 right-10 z-0"></div> */}
             </div>
@@ -203,6 +205,17 @@ const OcProductDetail: FunctionComponent<OcProductDetailProps> = ({
               </div>
             </div>
           </div>
+        </div>
+        <div className="flex mt-[40px] gap-[40px]">
+          {product?.xp?.Images?.map((img) => {
+            return (
+              <img
+                src={img}
+                className="w-[150px] h-[150px] cursor-pointer"
+                onClick={() => setCurrentPic(img)}
+              />
+            )
+          })}
         </div>
       </div>
     </div>
