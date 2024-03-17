@@ -53,7 +53,7 @@ const splideOptions = {
   pauseOnHover: false,
   pagination: false,
   arrows: false,
-  interval: 600000,
+  interval: 8000,
   perPage: 3,
   breakpoints: {
     768: {
@@ -88,7 +88,7 @@ function UserReviews() {
           <SplideTrack>
             {usersReviewArray.map((user, index) => (
               <SplideSlide key={index}>
-                <div className='!h-full'>
+                <div className="!h-full">
                   <div
                     key={index}
                     className="MuiGrid-root MuiGrid-direction-xs-column MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 MuiGrid-grid-lg-4 MuiBox-root css-kyjunr md:!max-w-[35vw] !h-full"
