@@ -43,32 +43,32 @@ const Layout: FunctionComponent = ({ children }) => {
               {' '}
               <img src="white-png-logo.png" className="w-[100px]" />
             </div>
-            <ul className={'flex'}>
-              <li className="px-4 py-1  hover:border-[#7fc3ba] transition duration-300 border-b-2 border-black">
+            <ul className={'flex [&>*]:border-transparent '}>
+              <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2 ">
                 <Link href="/">Home</Link>
               </li>
-              <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2border-black">
+              <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2">
                 <Link href="/cart">
                   <p>
                     Cart <sup className="bg-red-500 rounded-full p-1 px-2">{lineItemCount}</sup>
                   </p>
                 </Link>
               </li>
-              <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2border-black">
+              <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2">
                 <Link href="/products">Products</Link>
               </li>
 
               {isAnonymous ? (
                 <>
-                  <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2border-black">
+                  <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2">
                     <Link href="/registration">Registration</Link>
                   </li>
-                  <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2border-black">
+                  <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2">
                     <Link href="/login">Login</Link>
                   </li>
                 </>
               ) : (
-                <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2border-black">
+                <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2">
                   <button disabled={loading} onClick={() => dispatch(logout())}>
                     Logout
                   </button>
