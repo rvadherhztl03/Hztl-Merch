@@ -3,6 +3,7 @@ import { FunctionComponent } from 'react'
 import useOcProductList from '../../hooks/useOcProductList'
 import { OcProductListOptions } from '../../redux/ocProductList'
 import OcProductCard from '../OcProductCard'
+import OpenAISuggest from '../../../components/Suggestion/OpenAI'
 
 export interface OcProductListProps {
   options?: OcProductListOptions
@@ -13,12 +14,15 @@ const OcProductList: FunctionComponent<OcProductListProps> = ({ options, renderI
   const products = useOcProductList(options)
 
   return (
-    <ol>
-      {products &&
-        products.map((p) => (
-          <li key={p.ID}>{renderItem ? renderItem(p) : <OcProductCard product={p} />}</li>
-        ))}
-    </ol>
+    <>
+      <OpenAISuggest products={products} />
+      <ol>
+        {products &&
+          products.map((p) => (
+            <li key={p.ID}>{renderItem ? renderItem(p) : <OcProductCard product={p} />}</li>
+          ))}
+      </ol>
+    </>
   )
 }
 

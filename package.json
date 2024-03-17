@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@ordercloud/catalyst": "^1.2.0",
+    "@radix-ui/react-select": "^2.0.0",
     "@radix-ui/react-slot": "^1.0.2",
     "@react-three/drei": "^9.102.5",
     "@react-three/fiber": "^8.15.19",
@@ -22,6 +23,7 @@
     "lodash": "^4.17.21",
     "lucide-react": "^0.358.0",
     "next": "12.2.0",
+    "openai": "^4.29.1",
     "ordercloud-javascript-sdk": "^5.0.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
