@@ -40,31 +40,38 @@ const Layout: FunctionComponent = ({ children }) => {
         <nav className="flex justify-end min-h-[80px]">
           <div className="flex w-full justify-between py-3 shadow-md fixed pb-4 mb-4 z-20 bg-[#000000db] font-bold font-morderEra items-center px-8 text-white">
             <div className="px-4 py-1  transition duration-300 ">
-              {' '}
-              <img src="white-png-logo.png" className="w-[100px]" />
+              <img src="whitepnglogo.png" className="w-[100px]" />
             </div>
             <ul className={'flex [&>*]:border-transparent '}>
               <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2 ">
-                <Link href="/">Home</Link>
-              </li>
-              <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2">
-                <Link href="/cart">
-                  <p>
-                    Cart <sup className="bg-red-500 rounded-full p-1 px-2">{lineItemCount}</sup>
-                  </p>
+                <Link href="/">
+                  <a href="/">Home</a>
                 </Link>
               </li>
               <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2">
-                <Link href="/products">Products</Link>
+                <Link href="/cart">
+                  <a href="/cart">
+                    Cart <sup className="bg-red-500 rounded-full p-1 px-2">{lineItemCount}</sup>
+                  </a>
+                </Link>
+              </li>
+              <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2">
+                <Link href="/products">
+                  <a href="/Products">Products</a>
+                </Link>
               </li>
 
               {isAnonymous ? (
                 <>
                   <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2">
-                    <Link href="/registration">Registration</Link>
+                    <Link href="/registration">
+                      <a href="/registration">Registration</a>
+                    </Link>
                   </li>
                   <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2">
-                    <Link href="/login">Login</Link>
+                    <Link href="/login">
+                      <a href="/login">Login</a>
+                    </Link>
                   </li>
                 </>
               ) : (

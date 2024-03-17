@@ -7,6 +7,7 @@ import { useOcDispatch, useOcSelector } from '../../redux/ocStore'
 import OcQuantityInput from '../OcQuantityInput'
 import OcProductSpecField from './OcProductSpecField'
 import Shoe from '../../../components/Shoe'
+import Link from 'next/link'
 
 interface OcProductDetailProps {
   productId: string
@@ -101,8 +102,6 @@ const OcProductDetail: FunctionComponent<OcProductDetailProps> = ({
     },
     [dispatch, lineItem, quantity, onLineItemUpdated, specValues]
   )
-  const query = window.location.search
-  console.log('@@query', query)
   return product ? (
     // <div>
     //   <h2>{product.Name}</h2>
@@ -150,7 +149,11 @@ const OcProductDetail: FunctionComponent<OcProductDetailProps> = ({
               {product?.Name == 'Nike Shoe' ? (
                 <Shoe />
               ) : (
-                <img src={currentPic} className="w-full relative z-10" alt="" />
+                <img
+                  src={currentPic || product?.xp?.Images[0]}
+                  className="w-full relative z-10"
+                  alt=""
+                />
               )}
               {/* <div className="border-4 border-yellow-200 absolute top-10 bottom-10 left-10 right-10 z-0"></div> */}
             </div>
@@ -194,12 +197,14 @@ const OcProductDetail: FunctionComponent<OcProductDetailProps> = ({
                     onChange={setQuantity}
                   />
                   {quantity > 0 && (
-                    <a
-                      href={'/cart'}
-                      className="bg-yellow-300 opacity-75 hover:opacity-100 block mt-6 text-yellow-900 hover:text-gray-900 rounded-full px-10 py-2 font-semibold"
-                    >
-                      Checkout
-                    </a>
+                    <Link href={'/cart'}>
+                      <a
+                        href={'/cart'}
+                        className="bg-yellow-300 opacity-75 hover:opacity-100 block mt-6 text-yellow-900 hover:text-gray-900 rounded-full px-10 py-2 font-semibold"
+                      >
+                        Checkout
+                      </a>
+                    </Link>
                   )}
                 </form>
               </div>
@@ -211,7 +216,7 @@ const OcProductDetail: FunctionComponent<OcProductDetailProps> = ({
             return (
               <img
                 src={img}
-                className="w-[150px] h-[150px] cursor-pointer"
+                className="w-[150px] h-[150px] cursor-pointer object-cover"
                 onClick={() => setCurrentPic(img)}
               />
             )
