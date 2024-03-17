@@ -153,13 +153,13 @@ function Footer() {
                     </div>
                   </div>
                   <div
-                    className="MuiGrid-root MuiBox-root css-11k7m8q"
+                    className="MuiGrid-root MuiBox-root css-11k7m8q text-left"
                     data-aos=""
                     data-name="Button"
                   >
                     <a style={{ display: 'contents' }} className="" href="/">
                       <button
-                        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation css-pcncpj"
+                        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation css-pcncpj !text-base"
                         tabIndex={0}
                         type="button"
                         justifycontent="center"
@@ -178,11 +178,10 @@ function Footer() {
                   >
                     <a style={{ display: 'contents' }} className="" href="/">
                       <button
-                        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation css-pcncpj"
+                        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation css-pcncpj !text-base"
                         tabIndex={0}
                         type="button"
                         justifycontent="center"
-                        colorbutton="[object Object]"
                         background="#000000"
                         text="Contact Us"
                       >
@@ -197,7 +196,7 @@ function Footer() {
                   >
                     <a style={{ display: 'contents' }} className="" href="/">
                       <button
-                        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation css-pcncpj"
+                        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation css-pcncpj !text-base"
                         tabIndex={0}
                         type="button"
                         justifycontent="center"
@@ -258,7 +257,7 @@ function Footer() {
                   >
                     <a style={{ display: 'contents' }} className="" href="/">
                       <button
-                        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation css-pcncpj"
+                        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation css-pcncpj !text-base"
                         tabIndex={0}
                         type="button"
                         justifycontent="center"
@@ -277,7 +276,7 @@ function Footer() {
                   >
                     <a style={{ display: 'contents' }} className="" href="/">
                       <button
-                        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation css-pcncpj"
+                        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation css-pcncpj !text-base"
                         tabIndex={0}
                         type="button"
                         justifycontent="center"
@@ -342,7 +341,7 @@ function Footer() {
                       href="/subdomain/[subdomain]/page/www.facebook.com"
                     >
                       <button
-                        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation css-pcncpj"
+                        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation css-pcncpj !text-base"
                         tabIndex={0}
                         type="button"
                         justifycontent="center"
@@ -365,7 +364,7 @@ function Footer() {
                       href="/subdomain/[subdomain]/page/www.linkedin.com"
                     >
                       <button
-                        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation css-pcncpj"
+                        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation css-pcncpj !text-base"
                         tabIndex={0}
                         type="button"
                         justifycontent="center"
@@ -388,7 +387,7 @@ function Footer() {
                       href="/subdomain/[subdomain]/page/www.twitter.com"
                     >
                       <button
-                        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation css-pcncpj"
+                        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation css-pcncpj !text-base"
                         tabIndex={0}
                         type="button"
                         justifycontent="center"
@@ -411,7 +410,7 @@ function Footer() {
                       href="/subdomain/[subdomain]/page/www.instagram.com"
                     >
                       <button
-                        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation css-pcncpj"
+                        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-disableElevation css-pcncpj !text-base"
                         tabIndex={0}
                         type="button"
                         justifycontent="center"

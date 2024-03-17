@@ -45,18 +45,6 @@ const usersReviewArray = [
       "I've found my new favorite destination for shoe shopping! The website layout was aesthetically pleasing and user-friendly, making the browsing experience enjoyable. The range of shoes available was impressive. I appreciated the sizing guide, ensuring a perfect fit. Can't wait to shop here again!",
     userImage: 'Nikita.jpeg',
   },
-  {
-    userName: 'Dhrumil Mehta',
-    userFeedback:
-      'As a fashion enthusiast, I was thrilled to try out Custom Shoes Studio. The customization options are impressive, and the 3D technology adds a whole new level of excitement. Definitely recommending it to my friends!',
-    userImage: 'Dhrumil.png',
-  },
-  {
-    userName: 'Rushi Patel',
-    userFeedback:
-      "I'm not usually into online shopping, but Custom Shoes Studio caught my attention. The 3D customization feature is addictive—I couldn't stop experimenting with different colors and styles. It's a game-changer for sure!",
-    userImage: 'Rushi.png',
-  },
 ]
 
 const splideOptions = {
@@ -65,7 +53,7 @@ const splideOptions = {
   pauseOnHover: false,
   pagination: false,
   arrows: false,
-  interval: 6000,
+  interval: 600000,
   perPage: 3,
   breakpoints: {
     768: {
@@ -100,19 +88,19 @@ function UserReviews() {
           <SplideTrack>
             {usersReviewArray.map((user, index) => (
               <SplideSlide key={index}>
-                <div>
+                <div className='!h-full'>
                   <div
                     key={index}
-                    className="MuiGrid-root MuiGrid-direction-xs-column MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 MuiGrid-grid-lg-4 MuiBox-root css-kyjunr !max-w-[35vw] !h-[70vh]"
+                    className="MuiGrid-root MuiGrid-direction-xs-column MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 MuiGrid-grid-lg-4 MuiBox-root css-kyjunr md:!max-w-[35vw] !h-full"
                     data-aos=""
                     data-name="Card"
                   >
                     <div
-                      className="MuiGrid-root MuiGrid-direction-xs-column css-316kc6"
+                      className="MuiGrid-root MuiGrid-direction-xs-column css-316kc6 !h-full"
                       style={{ flexGrow: 1 }}
                     >
                       <div
-                        className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root css-1pa2qyg"
+                        className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root css-1pa2qyg !h-full"
                         style={{
                           backgroundColor: '#31837A',
                           borderRadius: 10,
@@ -120,9 +108,9 @@ function UserReviews() {
                           overflow: 'visible',
                         }}
                       >
-                        <div className="MuiCardContent-root flex-direction-column container-block css-xadw4u">
+                        <div className="MuiCardContent-root flex-direction-column container-block css-xadw4u !h-full">
                           <div
-                            className="MuiGrid-root flex-direction-column container-block MuiGrid-zeroMinWidth MuiGrid-direction-xs-column MuiBox-root css-1xut5k7"
+                            className="MuiGrid-root flex-direction-column container-block MuiGrid-zeroMinWidth MuiGrid-direction-xs-column MuiBox-root css-1xut5k7 !h-full"
                             style={{
                               zIndex: 2,
                               height: '100%',

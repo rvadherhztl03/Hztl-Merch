@@ -9,8 +9,8 @@ import { IoMdRefresh } from 'react-icons/io'
 function Model({ ...props }) {
   const group = useRef()
   const { nodes, materials } = useGLTF('/shoe.gltf')
-  const leather = useTexture("/texture.jpg")
-  const cotton = useTexture("/cotton.jpg")
+  const leather = useTexture('/texture.jpg')
+  const cotton = useTexture('/cotton.jpg')
   const foam = useTexture('/foam.jpg')
   const fabric = useTexture('/fabric.webp')
   return (
@@ -96,11 +96,11 @@ function Shoe() {
   return (
     <div className="App">
       <div className="wrapper">
-        <div className="card w-1/2 relative bg-gray-400">
+        <div className="card relative bg-gray-400 w-full lg:w-auto">
           <h2 className="mb-5 text-4xl drop-shadow-xl text-center">Customize your Shoes</h2>
           <div className="absolute top-0 right-0 flex items-center flex-col">
             <button
-              className="bg-gray-500 p-4 rounded-full"
+              className="bg-gray-500 p-4 rounded-full cursor-pointer"
               onClick={() => {
                 setMesh('#' + (((1 << 24) * Math.random()) | 0).toString(16).padStart(6, '0'))
                 setStripes('#' + (((1 << 24) * Math.random()) | 0).toString(16).padStart(6, '0'))
@@ -115,7 +115,8 @@ function Shoe() {
               <IoMdRefresh className="text-xl cursor-pointer" />
             </button>
           </div>
-          <div className="product-canvas bg-cover bg-opacity-10"
+          <div
+            className="product-canvas bg-cover bg-opacity-10"
             // style={{ backgroundImage: "url('beach.jpg')" }}
           >
             <Canvas>
@@ -128,12 +129,29 @@ function Shoe() {
                   position={[10, 15, 10]}
                   castShadow
                 />
-                <Model customColors={{ mesh: mesh, stripes: stripes, soul: soul, inner: inner, laces:laces, patch:patch, band:band,caps:caps,  }} />
-                <OrbitControls enablePan={true} enableZoom={true} enableRotate={true}autoRotateSpeed={5} autoRotate={true}  />
+                <Model
+                  customColors={{
+                    mesh: mesh,
+                    stripes: stripes,
+                    soul: soul,
+                    inner: inner,
+                    laces: laces,
+                    patch: patch,
+                    band: band,
+                    caps: caps,
+                  }}
+                />
+                <OrbitControls
+                  enablePan={true}
+                  enableZoom={true}
+                  enableRotate={true}
+                  autoRotateSpeed={5}
+                  autoRotate={true}
+                />
               </Suspense>
             </Canvas>
           </div>
-          <div className="flex justify-evenly [&>div]:flex [&>div]:flex-col [&>div>input]:w-20 [&>div>input]:h-14 [&>div>input]:bg-transparent  [&>div]:items-center">
+          <div className="flex flex-wrap justify-evenly [&>div]:flex [&>div]:flex-col [&>div>input]:w-20 [&>div>input]:h-14 [&>div>input]:bg-transparent  [&>div]:items-center">
             <div>
               <input
                 type="color"

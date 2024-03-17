@@ -51,17 +51,14 @@ const OcProductCard: FunctionComponent<OcProductCardProps> = ({ product }) => {
     //     </div>
     //   </a>
     // </div>
-    <div className={`flex justify-center items-center min-h-screen bg-[${currentColor}]`}>
+    <div
+      className={`flex justify-center items-center min-h-screen`}
+      style={{ backgroundColor: currentColor }}
+    >
       <div className="container flex flex-wrap justify-between w-5/6 h-3/4 bg-white m-5 py-4">
         <div
           className={`imgBx relative flex justify-center items-center w-1/2 h-full  transition duration-3001`}
         >
-          <span className="absolute top-0 left-4 text-black opacity-20 text-5xl font-bold z-1">
-            <span className="after:w-10 after:h-3 after:absolute after:top-1/4 after:left-[100px] after:bg-white opacity-">
-              Hztl
-            </span>
-            <br /> Merch
-          </span>
           <img
             src={currentPic}
             alt="Nike Jordan Proto-Lyte Image"
@@ -72,7 +69,7 @@ const OcProductCard: FunctionComponent<OcProductCardProps> = ({ product }) => {
           <div className="content">
             <h2 className="text-3xl font-semibold leading-tight" style={{ color: currentColor }}>
               {product.Name} <br />
-              <span className="text-xs uppercase text-gray-600">Running Collection</span>
+              <span className="text-xs uppercase text-gray-300">Running Collection</span>
             </h2>
             <p className="max-w-85 ml-15 text-base text-gray-700 mb-8">{product.Description}</p>
             <p>Available Colors</p>
@@ -80,7 +77,8 @@ const OcProductCard: FunctionComponent<OcProductCardProps> = ({ product }) => {
               {product?.xp?.Images?.map((im, index) => {
                 return (
                   <span
-                    className={`bg-[${colors[index]}] mx-2  block ${
+                    style={{ backgroundColor: colors[index] }}
+                    className={` mx-2  block ${
                       currentColor === colors[index] && 'active'
                     } w-6 h-6 rounded-full`}
                     onClick={() => handleColorChange(colors[index], im)}
