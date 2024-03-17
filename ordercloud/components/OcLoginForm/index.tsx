@@ -67,11 +67,11 @@ const OcLoginForm: FunctionComponent<OcLoginFormProps> = ({
             </h1>
           </div>
         </div>
-        <div className="lg:w-3/4 flex justify-center items-center lg:py-0 py-10">
+        <div className="w-full lg:w-3/4  flex items-center lg:py-0 py-10 px-[80px]">
           <form
             name="ocLoginForm"
             onSubmit={handleSubmit}
-            className="flex gap-6 flex-col lg:[&>label]:self-center lg:[&>label]:w-full px-7"
+            className="flex gap-6 flex-col w-full lg:[&>label]:self-center  [&>label]:w-full px-7"
           >
             <h1 className=" text-3xl lg:text-6xl text-center font-bold">{title}</h1>
             {error && <p>{error.message}</p>}

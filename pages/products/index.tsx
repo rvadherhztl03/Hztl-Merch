@@ -20,7 +20,6 @@ const queryMap: NextQueryMap = {
 
 const ProductListPage: FunctionComponent = () => {
   const { options } = useNextRouterMapping(queryMap)
-
   const handleRenderItem = (p: BuyerProduct) => {
     return (
       <Link href={`/products/${p.ID}`}>
