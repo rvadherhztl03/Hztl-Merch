@@ -83,10 +83,7 @@ function HeroBanner() {
                           className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-disableElevation css-tl0pzq"
                           tabIndex={0}
                           type="button"
-                          justifycontent="undefined"
-                          colorbutton="[object Object]"
                           background="#ffffff"
-                          text="Create%20My%20Custom%20T-Shit"
                         >
                           <a
                             style={{ display: 'contents' }}
