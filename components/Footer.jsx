@@ -153,7 +153,7 @@ function Footer() {
                     </div>
                   </div>
                   <div
-                    className="MuiGrid-root MuiBox-root css-11k7m8q"
+                    className="MuiGrid-root MuiBox-root css-11k7m8q text-left"
                     data-aos=""
                     data-name="Button"
                   >
@@ -182,7 +182,6 @@ function Footer() {
                         tabIndex={0}
                         type="button"
                         justifycontent="center"
-                        colorbutton="[object Object]"
                         background="#000000"
                         text="Contact Us"
                       >

@@ -88,7 +88,11 @@ function HeroBanner() {
                           background="#ffffff"
                           text="Create%20My%20Custom%20T-Shit"
                         >
-                          <a style={{ display: 'contents' }} className="" href="/products">
+                          <a
+                            style={{ display: 'contents' }}
+                            className="font-bold text-md"
+                            href="/products"
+                          >
                             Create Custom Product
                           </a>
                         </button>
@@ -98,7 +102,7 @@ function HeroBanner() {
                         data-aos=""
                         data-name="Button"
                       >
-                        <button
+                        {/* <button
                           className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeLarge MuiButton-outlinedSizeLarge MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeLarge MuiButton-outlinedSizeLarge MuiButton-disableElevation css-py6qz6"
                           tabIndex={0}
                           type="button"
@@ -110,7 +114,7 @@ function HeroBanner() {
                           <a style={{ display: 'contents' }} className="font-semibold" href="/">
                             CONTACT
                           </a>
-                        </button>
+                        </button> */}
                       </div>
                     </div>
                   </div>

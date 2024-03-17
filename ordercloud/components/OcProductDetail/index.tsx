@@ -6,6 +6,7 @@ import { useOcDispatch, useOcSelector } from '../../redux/ocStore'
 
 import OcQuantityInput from '../OcQuantityInput'
 import OcProductSpecField from './OcProductSpecField'
+import Shoe from '../../../components/Shoe'
 
 interface OcProductDetailProps {
   productId: string
@@ -133,11 +134,23 @@ const OcProductDetail: FunctionComponent<OcProductDetailProps> = ({
     // </div>
     <div className="min-w-screen min-h-screen bg-yellow-300 flex items-center p-5 lg:p-10 overflow-hidden relative">
       <div className="w-full max-w-6xl rounded bg-white shadow-xl p-10 lg:p-20 mx-auto text-gray-800 relative md:text-left">
-        <div className="md:flex items-center -mx-10">
-          <div className="w-full md:w-1/2 px-10 mb-10 md:mb-0">
+        <div
+          className={`md:flex  items-center -mx-10 ${
+            product?.Name == 'Nike Shoe' && 'flex-col gap-[40px]'
+          }`}
+        >
+          <div
+            className={`w-full  px-10 mb-10 md:mb-0 ${
+              product?.Name == 'Nike Shoe' ? '' : 'md:w-1/2'
+            }`}
+          >
             <div className="relative">
-              <img src={product.xp.Images[0]} className="w-full relative z-10" alt="" />
-              <div className="border-4 border-yellow-200 absolute top-10 bottom-10 left-10 right-10 z-0"></div>
+              {product?.Name == 'Nike Shoe' ? (
+                <Shoe />
+              ) : (
+                <img src={product.xp.Images[0]} className="w-full relative z-10" alt="" />
+              )}
+              {/* <div className="border-4 border-yellow-200 absolute top-10 bottom-10 left-10 right-10 z-0"></div> */}
             </div>
           </div>
           <div className="w-full md:w-1/2 px-10">

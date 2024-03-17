@@ -16,15 +16,16 @@ const Layout: FunctionComponent = ({ children }) => {
   }))
 
   useEffect(() => {
-    function twak(){
-      const s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-      s1.async=true;
-      s1.src='https://embed.tawk.to/65f5c632cc1376635adb5b4b/1hp40se6a';
-      s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
-      s0.parentNode.insertBefore(s1,s0);
-      }
-  twak()
+    function twak() {
+      const s1 = document.createElement('script'),
+        s0 = document.getElementsByTagName('script')[0]
+      s1.async = true
+      s1.src = 'https://embed.tawk.to/65f5c632cc1376635adb5b4b/1hp40se6a'
+      s1.charset = 'UTF-8'
+      s1.setAttribute('crossorigin', '*')
+      s0.parentNode.insertBefore(s1, s0)
+    }
+    twak()
   }, [])
 
   return (
@@ -48,7 +49,9 @@ const Layout: FunctionComponent = ({ children }) => {
               </li>
               <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2border-black">
                 <Link href="/cart">
-                  <p>Cart {lineItemCount}</p>
+                  <p>
+                    Cart <sup className="bg-red-500 rounded-full p-1 px-2">{lineItemCount}</sup>
+                  </p>
                 </Link>
               </li>
               <li className="px-4 py-1 hover:border-b-2 hover:border-[#7fc3ba] transition duration-300 border-b-2border-black">
