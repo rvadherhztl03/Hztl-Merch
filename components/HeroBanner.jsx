@@ -88,7 +88,7 @@ function HeroBanner() {
                           <a
                             style={{ display: 'contents' }}
                             className="font-bold text-md"
-                            href="/products"
+                            href="/products/product001"
                           >
                             Create Custom Product
                           </a>
